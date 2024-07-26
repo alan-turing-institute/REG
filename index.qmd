@@ -1,5 +1,6 @@
 ---
 title: "Hi! 👋 We're the Research Engineering group at the Alan Turing Institute."
+page-navigation: false
 ---
 
 We're excited you've come to visit us! 🎉
