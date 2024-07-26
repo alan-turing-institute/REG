@@ -1,0 +1,22 @@
+---
+title: "Hi! 👋 We're the Research Engineering group at the Alan Turing Institute."
+---
+
+We're excited you've come to visit us! 🎉
+
+The Research Engineering Group (REG) is a team of data scientists, software engineers, and compute specialists who work together to buiild tools and software to support research. We work across many themes, such as [health](https://www.turing.ac.uk/research/research-programmes/health-and-medical-sciences), [environment and sustainability](https://www.turing.ac.uk/research/environment-and-sustainability), and [defence and national security](https://www.turing.ac.uk/research/defence-and-national-security).
+
+If you want to see some of the work we're doing, check out the various projects on our [GitHub page](https://github.com/alan-turing-institute/)! We also run [Turing Data Stories](https://alan-turing-institute.github.io/TuringDataStories/), a series of short, engaging, and accessible stories about Turing research.
+
+To learn more about the team, check out our [handbook](https://alan-turing-institute.github.io/REG-handbook/) — this is a living document that we're updating with our practices and processes, and should give you some insight into how we work.
+
+### Job opportunities
+We'll be hiring in the coming months, but if you're interested in joining us, please get in touch with us by emailing any questions to [recruitment-hut23@turing.ac.uk](mailto:recruitment-hut23@turing.ac.uk).
+
+### Links
+- [Our website](https://www.turing.ac.uk/research/research-engineering)
+- [Our GitHub page](https://github.com/alan-turing-institute/)
+- [Our Twitter page](https://twitter.com/turinghut23)
+- [Our LinkedIn page](https://www.linkedin.com/showcase/turing-research-engineering/?originalSubdomain=uk)
+
+
