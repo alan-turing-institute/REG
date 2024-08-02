@@ -7,7 +7,7 @@ navbar: false
 
 We're excited you've come to visit us! 🎉
 
-The Research Engineering Group (REG) is a team of data scientists, software engineers, and compute specialists who work together to buiild tools and software to support research. We work across many themes, such as [health](https://www.turing.ac.uk/research/research-programmes/health-and-medical-sciences), [environment and sustainability](https://www.turing.ac.uk/research/environment-and-sustainability), and [defence and national security](https://www.turing.ac.uk/research/defence-and-national-security).
+The Research Engineering Group (REG) is a team of data scientists, software engineers, and compute specialists who work together to build tools and software to support research. We work across many themes, such as [health](https://www.turing.ac.uk/research/research-programmes/health-and-medical-sciences), [environment and sustainability](https://www.turing.ac.uk/research/environment-and-sustainability), and [defence and national security](https://www.turing.ac.uk/research/defence-and-national-security).
 
 If you want to see some of the work we're doing, check out the various projects on our [GitHub page](https://github.com/alan-turing-institute/)! We also run [Turing Data Stories](https://alan-turing-institute.github.io/TuringDataStories/), a series of short, engaging, and accessible stories about Turing research.
 
