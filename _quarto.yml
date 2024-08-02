@@ -4,6 +4,8 @@ project:
 website:
   title: "Research Engineering Group"
   site-url: "https://alan-turing-institute.github.io/REG/"
+  repo-url: https://github.com/alan-turing-institute/REG
+  repo-actions: [edit, issue]
 
 format:
   html:
