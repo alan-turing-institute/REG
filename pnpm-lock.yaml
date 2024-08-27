@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      svelte-youtube-embed:
-        specifier: ^0.3.0
-        version: 0.3.0(svelte@4.2.19)
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^3.1.1
@@ -575,11 +571,6 @@ packages:
       typescript:
         optional: true
 
-  svelte-youtube-embed@0.3.0:
-    resolution: {integrity: sha512-Hg0IzZHSHgc8wvA1vhSqf3nPZolWSCClEjsCLscLPZRE9EDE2SjbBGsk7KvSfAgKJ5fIYmc5KqWHlC4b8wa5mw==}
-    peerDependencies:
-      svelte: ^4.0.0
-
   svelte@4.2.19:
     resolution: {integrity: sha512-IY1rnGr6izd10B0A8LqsBfmlT5OILVuZ7XsI0vdGPEvuonFV7NYEUK4dAkm9Zg2q0Um92kYjTpS1CAP3Nh/KWw==}
     engines: {node: '>=16'}
@@ -1093,10 +1084,6 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.41
       typescript: 5.5.4
-
-  svelte-youtube-embed@0.3.0(svelte@4.2.19):
-    dependencies:
-      svelte: 4.2.19
 
   svelte@4.2.19:
     dependencies:
