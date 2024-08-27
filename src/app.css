@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* https://css-tricks.com/box-sizing/ */
+html {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Override browser default style sheet. */
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}

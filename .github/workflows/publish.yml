@@ -1,25 +1,37 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches:
+      - svelte
 
-name: Quarto Publish
+name: Publish Svelte
 
 jobs:
-  build-deploy:
+  publish-svelte:
+
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          version: 9
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build --base /REG/svelte
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          destination_dir: svelte
+          publish_branch: gh-pages
