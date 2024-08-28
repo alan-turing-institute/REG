@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 /* https://css-tricks.com/box-sizing/ */
 html {
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+h2 {
+    font-size: 1.8em;
+}
+
+/* Mobile */
+@media (max-width: 700px) and (min-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
 }
 
 *, *:before, *:after {

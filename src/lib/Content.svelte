@@ -9,19 +9,28 @@
     let contactH2: HTMLHeadingElement;
     let workH2: HTMLHeadingElement;
     onMount(() => {
-        const dy = 0;
-        $peakStarts = [
-            0, // Don't take the y-coordinate of the title as it's larger than 0
-            researchH2.getBoundingClientRect().top - dy,
-            examplesH2.getBoundingClientRect().top - dy,
-            workH2.getBoundingClientRect().top - dy,
-            contactH2.getBoundingClientRect().top - dy,
-        ];
+        // Make this positive to make the image change before the heading
+        // reaches the top of the page
+        const offset = 0;
+        // 200 ms delay for Safari :eyeroll:
+        // https://stackoverflow.com/questions/26347742
+        setTimeout(() => {
+            $peakStarts = [
+                0, // Don't take the y-coordinate of the title as it's larger than 0
+                researchH2.getBoundingClientRect().top - offset,
+                examplesH2.getBoundingClientRect().top - offset,
+                workH2.getBoundingClientRect().top - offset,
+                contactH2.getBoundingClientRect().top - offset,
+            ];
+        }, 200);
     });
 </script>
 
 <div id="content">
-    <h1>Research Engineering at the Turing</h1>
+    <div id="title">
+        <h1>Research Engineering</h1>
+        <h3>The Alan Turing Institute</h3>
+    </div>
     <p>Hello! We’re excited you’ve come to visit us! 🎉</p>
 
     <p>
@@ -78,24 +87,21 @@
 
 <style>
     #content {
-        margin: 20px 100px;
+        margin: 20px 70px;
         padding: 10px 20px;
         padding-bottom: 800px;
         opacity: 0.9;
         background-color: #3a3a3a;
         color: white;
     }
-    @media (max-width: 800px) {
-        #content {
-            margin: 20px 20px;
-            font-size: 0.9em;
-        }
-    }
-
-    h1 {
+    div#title {
         margin-top: 0;
         margin-bottom: 100px;
     }
+    div#title h1, div#title h3 {
+        margin: 0;
+    }
+
     h2 {
         margin-top: 500px;
     }
@@ -109,4 +115,20 @@
     a:visited {
         color: #e0e0e0;
     }
+
+    @media (max-width: 700px) and (min-width: 600px) {
+        #content {
+            margin: 20px auto;
+            width: 560px;
+        }
+    }
+    @media (max-width: 600px) {
+        #content {
+            margin: 20px 20px;
+        }
+        div#title {
+            margin-bottom: 50px;
+        }
+    }
+
 </style>

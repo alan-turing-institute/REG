@@ -25,7 +25,7 @@
         let peakStart: number = $peakStarts[pictureNumber];
         let peakEnd: number = pictureNumber < $peakStarts.length - 1
             ? $peakStarts[pictureNumber + 1] - a
-            : peakStart + 1000;
+            : peakStart + 10000000; // some large number to make sure it's always > curY
         if (curY < peakStart) {
             return Math.max(0, 1 - (peakStart - curY) / a);
         }
