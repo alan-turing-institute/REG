@@ -1,15 +1,14 @@
 <script lang="ts">
     import BackgroundImage from 'src/lib/BackgroundImage.svelte';
+    import Content from 'src/lib/Content.svelte';
 
-    let y: number;
-
-    // pictureNumber = 0, 1, 2, ...
-    function getOpacity(pictureNumber: number): number {
+    // curY = current y-coordinate; pictureNumber = 0, 1, 2, ...
+    function getOpacity(curY: number, pictureNumber: number): number {
         // How many pixels the crossfade effect should work over, i.e. how many
         // pixels it takes to fade out an image and fade in the next one
         let a: number = 1000;  
         // How many pixels the image should persist for at max opacity
-        let b: number = 700;
+        let b: number = 500;
 
         // The first image should begin its max opacity at 0; it should start
         // fading out at b pixels, and be completely faded out at a + b pixels.
@@ -19,52 +18,37 @@
         // pixels. The following formulae calculate the appropriate opacity.
         let peakStart: number = (a + b) * pictureNumber;
         let peakEnd: number = peakStart + b;
-        if (b < peakStart) {
-            return Math.max(0, 1 - (peakStart - b) / a);
+        if (curY < peakStart) {
+            return Math.max(0, 1 - (peakStart - curY) / a);
         }
-        else if (b > peakEnd) {
-            return Math.max(0, 1 - (b - peakEnd) / a);
+        else if (curY > peakEnd) {
+            return Math.max(0, 1 - (curY - peakEnd) / a);
         }
         else {
             return 1;
         }
     }
 
-    // Generate some fake text
-    let t: string = "";
-    for (let i = 0; i < 100; i++) {
-        t += `Some text, ${i}\n`;
-    }
-
-    let opacities: number[] = [0, 0, 0, 0];
+    let y: number = 0;
+    let backgroundImages = [
+        "backgrounds/tgks.jpg",
+        "backgrounds/azmr.jpg",
+        "backgrounds/tgks.jpg",
+        "backgrounds/azmr.jpg"
+    ]
+    let opacities: number[] = Array(backgroundImages.length).fill(0);
     $: {
-        console.log(y);
         for (let i = 0; i < opacities.length; i++) {
-            opacities[i] = getOpacity(i);
+            opacities[i] = getOpacity(y, i);
         }
-        console.log(opacities);
     }
 </script>
 
 <svelte:window bind:scrollY={y} />
-<BackgroundImage imagePath="/backgrounds/tgks.jpg" opacity={opacities[0]} />
-<BackgroundImage imagePath="/backgrounds/azmr.jpg" opacity={opacities[1]} />
-<BackgroundImage imagePath="/backgrounds/tgks.jpg" opacity={opacities[2]} />
-<BackgroundImage imagePath="/backgrounds/azmr.jpg" opacity={opacities[3]} />
+{#each backgroundImages as imagePath, i}
+    <BackgroundImage imagePath={imagePath} opacity={opacities[i]} />
+{/each}
 
 <main>
-    <div id="content">
-        {#each t.split("\n") as text}
-            <p>{text}</p>
-        {/each}
-    </div>
+    <Content />
 </main>
-
-<style>
-
-    #content {
-        margin: 0 100px;
-        opacity: 0.7;
-        background-color: white;
-    }
-</style>
