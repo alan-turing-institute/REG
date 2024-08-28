@@ -8,11 +8,12 @@
     let examplesH2: HTMLHeadingElement;
     let contactH2: HTMLHeadingElement;
     onMount(() => {
+        const dy = 100;
         $peakStarts = [
             0, // Don't take the y-coordinate of the title as it's larger than 0
-            researchH2.getBoundingClientRect().top,
-            examplesH2.getBoundingClientRect().top,
-            contactH2.getBoundingClientRect().top,
+            researchH2.getBoundingClientRect().top - dy,
+            examplesH2.getBoundingClientRect().top - dy,
+            contactH2.getBoundingClientRect().top - dy,
         ]
     });
 </script>
@@ -64,7 +65,7 @@
     #content {
         margin: 20px 100px;
         padding: 10px 20px;
-        padding-bottom: 500px;
+        padding-bottom: 800px;
         opacity: 0.9;
         background-color: #3a3a3a;
         color: white;
