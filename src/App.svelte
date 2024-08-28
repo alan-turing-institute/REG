@@ -40,8 +40,9 @@
     let backgroundImages = [
         "backgrounds/tgks.jpg",
         "backgrounds/azmr.jpg",
-        "backgrounds/tgks.jpg",
-        "backgrounds/azmr.jpg"
+        "backgrounds/shmn.png",
+        "backgrounds/wsct.png",
+        "backgrounds/pplp.png",
     ]
     let opacities: number[] = Array(backgroundImages.length).fill(0);
     $: {

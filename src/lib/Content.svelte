@@ -1,20 +1,22 @@
 <script lang="ts">
     import Email from "src/lib/Email.svelte";
     import { onMount } from "svelte";
-    import { peakStarts } from 'src/stores';
+    import { peakStarts } from "src/stores";
 
     // Get y-coordinates of headings on mount
     let researchH2: HTMLHeadingElement;
     let examplesH2: HTMLHeadingElement;
     let contactH2: HTMLHeadingElement;
+    let workH2: HTMLHeadingElement;
     onMount(() => {
-        const dy = 100;
+        const dy = 200;
         $peakStarts = [
             0, // Don't take the y-coordinate of the title as it's larger than 0
             researchH2.getBoundingClientRect().top - dy,
             examplesH2.getBoundingClientRect().top - dy,
+            workH2.getBoundingClientRect().top - dy,
             contactH2.getBoundingClientRect().top - dy,
-        ]
+        ];
     });
 </script>
 
@@ -49,15 +51,28 @@
         science to analyse cultural phenomena in our world.
     </p>
 
+    <h2 bind:this={workH2}>How we work</h2>
+    <p>
+        To learn more about the team, check out our handbook — this is a living
+        document that we’re updating with our practices and processes, and
+        should give you some insight into how we work.
+    </p>
+
     <h2 bind:this={contactH2}>Get in touch with us</h2>
     <p>
         Recruitment: <Email address="reg-recruitment-inbox@turing.ac.uk" />
     </p>
     <p>
-        Sign up for mailing list: <a href="https://forms.office.com/e/vJy48fNJXB" target="_blank">here</a>
+        Sign up for mailing list: <a
+            href="https://forms.office.com/e/vJy48fNJXB"
+            target="_blank">here</a
+        >
     </p>
     <p>
-        Unsubscribe from mailing list: <a href="https://forms.office.com/e/P22MqUT0N3" target="_blank">here</a>
+        Unsubscribe from mailing list: <a
+            href="https://forms.office.com/e/P22MqUT0N3"
+            target="_blank">here</a
+        >
     </p>
 </div>
 
