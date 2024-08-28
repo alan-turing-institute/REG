@@ -9,7 +9,7 @@
     let contactH2: HTMLHeadingElement;
     let workH2: HTMLHeadingElement;
     onMount(() => {
-        const dy = 200;
+        const dy = 0;
         $peakStarts = [
             0, // Don't take the y-coordinate of the title as it's larger than 0
             researchH2.getBoundingClientRect().top - dy,
@@ -84,6 +84,12 @@
         opacity: 0.9;
         background-color: #3a3a3a;
         color: white;
+    }
+    @media (max-width: 800px) {
+        #content {
+            margin: 20px 20px;
+            font-size: 0.9em;
+        }
     }
 
     h1 {

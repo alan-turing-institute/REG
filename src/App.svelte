@@ -11,6 +11,7 @@
             return pictureNumber === 0 ? 1 : 0;
         }
         console.log($peakStarts);
+        console.log(curY);
         // How many pixels the crossfade effect should work over, i.e. how many
         // pixels it takes to fade out an image and fade in the next one
         let a: number = 200;  
