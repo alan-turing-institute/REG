@@ -6,15 +6,15 @@
     // curY = current y-coordinate; pictureNumber = 0, 1, 2, ...
     // peakStarts = array, i-th element is when the i-th picture should be fully faded in
     function getOpacity(curY: number, pictureNumber: number): number {
-        // Handle the case where $peakStarts is not yet initialised
-        if ($peakStarts === null) {
-            return pictureNumber === 0 ? 1 : 0;
-        }
-        console.log($peakStarts);
-        console.log(curY);
         // How many pixels the crossfade effect should work over, i.e. how many
         // pixels it takes to fade out an image and fade in the next one
-        let a: number = 200;  
+        const a: number = 400;  
+        const maxOpacity: number = 0.7;
+
+        // Handle the case where $peakStarts is not yet initialised
+        if ($peakStarts === null) {
+            return pictureNumber === 0 ? maxOpacity : 0;
+        }
 
         // The first image should begin its max opacity at 0; it should start
         // fading out at b pixels, and be completely faded out at a + b pixels.
@@ -27,23 +27,23 @@
             ? $peakStarts[pictureNumber + 1] - a
             : peakStart + 10000000; // some large number to make sure it's always > curY
         if (curY < peakStart) {
-            return Math.max(0, 1 - (peakStart - curY) / a);
+            return Math.max(0, maxOpacity * (1 - (peakStart - curY) / a));
         }
         else if (curY > peakEnd) {
-            return Math.max(0, 1 - (curY - peakEnd) / a);
+            return Math.max(0, maxOpacity * (1 - (curY - peakEnd) / a));
         }
         else {
-            return 1;
+            return maxOpacity;
         }
     }
 
     let y: number = 0;
     let backgroundImages = [
-        "backgrounds/tgks.jpg",
-        "backgrounds/azmr.jpg",
-        "backgrounds/shmn.png",
-        "backgrounds/wsct.png",
-        "backgrounds/pplp.png",
+        "backgrounds/hw24.jpg",
+        "backgrounds/aiuk24.jpg",
+        "backgrounds/ad24.jpg",
+        "backgrounds/rsecon23.jpg",
+        "backgrounds/ad23.jpg",
     ]
     let opacities: number[] = Array(backgroundImages.length).fill(0);
     $: {
