@@ -3,12 +3,21 @@
     import Content from 'src/lib/Content.svelte';
     import { peakStarts } from 'src/stores';
 
+    let backgroundImages = [
+        "backgrounds/hw23.png",
+        "backgrounds/hw24.jpg",
+        "backgrounds/aiuk24.jpg",
+        "backgrounds/ad24.jpg",
+        "backgrounds/rsecon23.jpg",
+        // "backgrounds/ad23.jpg",
+    ]
+
     // curY = current y-coordinate; pictureNumber = 0, 1, 2, ...
     // peakStarts = array, i-th element is when the i-th picture should be fully faded in
     function getOpacity(curY: number, pictureNumber: number): number {
         // How many pixels the crossfade effect should work over, i.e. how many
         // pixels it takes to fade out an image and fade in the next one
-        const a: number = 400;  
+        const a: number = 300;  
         const maxOpacity: number = 0.7;
 
         // Handle the case where $peakStarts is not yet initialised
@@ -23,7 +32,7 @@
         // b)) + b pixels, and be completely faded out at (N + 1) * (a + b)
         // pixels. The following formulae calculate the appropriate opacity.
         let peakStart: number = $peakStarts[pictureNumber];
-        let peakEnd: number = pictureNumber < $peakStarts.length - 1
+        let peakEnd: number = pictureNumber < backgroundImages.length - 1
             ? $peakStarts[pictureNumber + 1] - a
             : peakStart + 10000000; // some large number to make sure it's always > curY
         if (curY < peakStart) {
@@ -38,13 +47,6 @@
     }
 
     let y: number = 0;
-    let backgroundImages = [
-        "backgrounds/hw24.jpg",
-        "backgrounds/aiuk24.jpg",
-        "backgrounds/ad24.jpg",
-        "backgrounds/rsecon23.jpg",
-        "backgrounds/ad23.jpg",
-    ]
     let opacities: number[] = Array(backgroundImages.length).fill(0);
     $: {
         for (let i = 0; i < opacities.length; i++) {

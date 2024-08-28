@@ -1,94 +1,73 @@
-<div id="gc-images">
-    <div class="gc-image-container">
-        <a
-            href="https://www.turing.ac.uk/research/transformation-health"
-            target="_blank"
-        >
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-                alt="Health"
-            />
-            <div class="float-text">Health</div>
-        </a>
-    </div>
+<script lang="ts">
+    import GridRow from "src/lib/grid/GridRow.svelte";
+</script>
 
-    <div class="gc-image-container">
-        <a
-            href="https://www.turing.ac.uk/research/environment-and-sustainability"
-            target="_blank"
-        >
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-                alt="Environment and Sustainability"
-            />
-            <div class="float-text">Environment and Sustainability</div>
-        </a>
-    </div>
+<p>
+    Research at the Turing is largely organised into three themes, namely:
+    Health; Environment and Sustainability; and Defence and National Security.
+    Apart from these, we also carry out foundational research in data science
+    and AI, which spans all of these themes.
+</p>
 
-    <div class="gc-image-container">
-        <a
-            href="https://www.turing.ac.uk/research/defence-and-national-security"
-            target="_blank"
-        >
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-                alt="Defence and National Security"
-            />
-            <div class="float-text">Defence and National Security</div>
-        </a>
-    </div>
-    <div class="gc-image-container grid-3">
-        <a
-            href="https://www.turing.ac.uk/research/transformation-health"
-            target="_blank"
-        >
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-                alt="Foundational Research in Data Science and AI"
-            />
-            <div class="float-text">
-                Foundational Research in Data Science and AI
-            </div>
-        </a>
-    </div>
+<p>Click on each of these links to learn more.</p>
+
+<div id="research">
+    <GridRow
+        pictureFirst={true}
+        textBigger={true}
+        href="https://www.turing.ac.uk/research/transformation-health"
+        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        title="Health"
+    >
+        <p>“I tell you I must go!” I retorted, roused to something like passion. “Do you think I can stay to become nothing to you? Do you think I am an automaton?—a machine without feelings? and can bear to have my morsel of bread snatched from my lips, and my drop of living water dashed from my cup? Do you think, because I am poor, obscure, plain, and little, I am soulless and heartless? You think wrong!—I have as much soul as you,—and full as much heart! And if God had gifted me with some beauty and much wealth, I should have made it as hard for you to leave me, as it is now for me to leave you. I am not talking to you now through the medium of custom, conventionalities, nor even of mortal flesh;—it is my spirit that addresses your spirit; just as if both had passed through the grave, and we stood at God’s feet, equal,—as we are!”</p>
+    </GridRow>
+
+    <GridRow
+        pictureFirst={false}
+        textBigger={true}
+        href="https://www.turing.ac.uk/research/environment-and-sustainability"
+        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        title="Environment and Sustainability"
+    >
+        <p>Blah blah environment</p>
+    </GridRow>
+
+    <GridRow
+        pictureFirst={true}
+        textBigger={true}
+        href="https://www.turing.ac.uk/research/defence-and-national-security"
+        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        title="Defence and National Security"
+    >
+        <p>Blah blah defence</p>
+    </GridRow>
+
+    <GridRow
+        pictureFirst={false}
+        textBigger={true}
+        href="https://www.turing.ac.uk/research/research-programmes/fundamental-ai"
+        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        title="Foundational Research"
+    >
+        <p>Blah blah foundational</p>
+    </GridRow>
 </div>
 
 <style>
-    div#gc-images {
+    div#research {
+        margin-top: 40px;
+        padding: 0px 30px;
         display: grid;
         width: 100%;
         max-width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
-        & div.gc-image-container {
-            position: relative;
-        }
-        & img {
-            height: 100%;
-            width: 100%;
-            border-radius: 5px;
-            transition: opacity 0.3s;
-            object-fit: cover;
-        }
-        & img:hover {
-            opacity: 0.8;
-        }
-        & div.float-text {
-            position: absolute;
-            text-align: center;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            color: white;
-            text-shadow: 2px 2px 4px black;
-        }
+        grid-template-columns: 3fr 2fr 3fr;
+        gap: 20px 50px;
     }
 
     @media (max-width: 600px) {
-        div.float-text {
-            font-size: 0.8em;
+        div#research {
+            padding: 0px 10px;
+            gap: 20px 20px;
         }
     }
 </style>
