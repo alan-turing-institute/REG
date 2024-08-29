@@ -8,7 +8,7 @@
             return;
         }
         // Don't know why this fudge factor.
-        const offset = sectionNumber === 0 ? 0 : -15;
+        const offset = sectionNumber === 0 ? 0 : -80;
         const targetY = $peakStarts[sectionNumber] - offset;
         window.scrollTo({ top: targetY, behavior: "smooth" });
     }
