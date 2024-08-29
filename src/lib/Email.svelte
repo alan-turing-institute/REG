@@ -2,19 +2,11 @@
     export let address: string;
 </script>
 
-<a href="mailto:{address}">{address}</a>
+<a href="mailto:{address}@turing.ac.uk">{address}@turing.ac.uk</a>
 
 <style>
     a {
         font-family: monospace;
-        color: #b3cffc;
-    }
-
-    a:hover {
-        color: #8ab4f8;
-    }
-
-    a:visited {
-        color: #b3cffc;
+        font-size: 95%;
     }
 </style>

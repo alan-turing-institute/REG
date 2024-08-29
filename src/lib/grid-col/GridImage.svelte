@@ -17,12 +17,9 @@
 </a>
 
 <style>
-    a {
-        grid-column: span 1;
-    }
-
     img {
         height: 100%;
+        max-height: 200px;
         width: 100%;
         border-radius: 5px;
         transition: opacity 0.3s, box-shadow 0.3s;

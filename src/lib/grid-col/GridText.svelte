@@ -1,29 +1,26 @@
 <script lang="ts">
-    export let textBigger: boolean;
     export let href: string;
     export let title: string;
     export let hovered: boolean;
 </script>
 
-<a
-    class="text"
-    {href}
-    target="_blank"
-    on:mouseenter={() => (hovered = true)}
-    on:mouseleave={() => (hovered = false)}
-    class:bigger={textBigger}
-    class:hovered
->
-    <div class="text">
+<div class="text">
+    <a
+        class="text"
+        {href}
+        target="_blank"
+        on:mouseenter={() => (hovered = true)}
+        on:mouseleave={() => (hovered = false)}
+        class:hovered
+    >
         <h3>{title}</h3>
-        <slot />
-    </div>
-</a>
+    </a>
+</div>
+<div class="text">
+    <slot />
+</div>
 
 <style>
-    a.bigger {
-        grid-column: span 2;
-    }
     a {
         transition: color 0.3s;
         height: min-content;
@@ -44,6 +41,6 @@
     }
 
     div.text {
-        font-size: 0.9em;
+        font-size: 90%;
     }
 </style>

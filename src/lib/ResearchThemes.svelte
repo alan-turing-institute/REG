@@ -1,5 +1,6 @@
 <script lang="ts">
-    import GridRow from "src/lib/grid/GridRow.svelte";
+    import Grid from "src/lib/grid-row/Grid.svelte";
+    import GridRow from "src/lib/grid-row/GridRow.svelte";
 </script>
 
 <p>
@@ -11,63 +12,63 @@
 
 <p>Click on each of these links to learn more.</p>
 
-<div id="research">
+<Grid id="container">
     <GridRow
         pictureFirst={true}
-        textBigger={true}
         href="https://www.turing.ac.uk/research/transformation-health"
         imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
         title="Health"
     >
-        <p>“I tell you I must go!” I retorted, roused to something like passion. “Do you think I can stay to become nothing to you? Do you think I am an automaton?—a machine without feelings? and can bear to have my morsel of bread snatched from my lips, and my drop of living water dashed from my cup? Do you think, because I am poor, obscure, plain, and little, I am soulless and heartless? You think wrong!—I have as much soul as you,—and full as much heart! And if God had gifted me with some beauty and much wealth, I should have made it as hard for you to leave me, as it is now for me to leave you. I am not talking to you now through the medium of custom, conventionalities, nor even of mortal flesh;—it is my spirit that addresses your spirit; just as if both had passed through the grave, and we stood at God’s feet, equal,—as we are!”</p>
+        <p>
+            “I tell you I must go!” I retorted, roused to something like
+            passion. “Do you think I can stay to become nothing to you? Do you
+            think I am an automaton?—a machine without feelings? and can bear to
+            have my morsel of bread snatched from my lips, and my drop of living
+            water dashed from my cup?
+        </p>
     </GridRow>
 
     <GridRow
         pictureFirst={false}
-        textBigger={true}
         href="https://www.turing.ac.uk/research/environment-and-sustainability"
         imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
         title="Environment and Sustainability"
     >
-        <p>Blah blah environment</p>
+        <p>
+            Do you think, because I am poor, obscure, plain, and little, I am
+            soulless and heartless? You think wrong!—I have as much soul as
+            you,—and full as much heart! And if God had gifted me with some
+            beauty and much wealth, I should have made it as hard for you to
+            leave me, as it is now for me to leave you.
+        </p>
     </GridRow>
 
     <GridRow
         pictureFirst={true}
-        textBigger={true}
         href="https://www.turing.ac.uk/research/defence-and-national-security"
         imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
         title="Defence and National Security"
     >
-        <p>Blah blah defence</p>
+        <p>
+            I am not talking to you now through the medium of custom,
+            conventionalities, nor even of mortal flesh;—it is my spirit that
+            addresses your spirit; just as if both had passed through the grave,
+            and we stood at God’s feet, equal,—as we are!”
+        </p>
     </GridRow>
 
     <GridRow
         pictureFirst={false}
-        textBigger={true}
         href="https://www.turing.ac.uk/research/research-programmes/fundamental-ai"
         imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
         title="Foundational Research"
     >
-        <p>Blah blah foundational</p>
+        <p>Lorem ipsum, Jane's monologue ended there.</p>
     </GridRow>
-</div>
+</Grid>
 
 <style>
-    div#research {
-        margin-top: 40px;
-        padding: 0px 30px;
-        display: grid;
-        width: 100%;
-        max-width: 100%;
-        grid-template-columns: 3fr 2fr 3fr;
-        gap: 20px 50px;
-    }
-
-    @media (max-width: 600px) {
-        div#research {
-            padding: 0px 10px;
-            gap: 20px 20px;
-        }
+    p {
+        margin: 0;
     }
 </style>

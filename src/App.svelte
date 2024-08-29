@@ -1,7 +1,8 @@
 <script lang="ts">
-    import BackgroundImage from 'src/lib/BackgroundImage.svelte';
-    import Content from 'src/lib/Content.svelte';
-    import { peakStarts } from 'src/stores';
+    import BackgroundImage from "src/lib/BackgroundImage.svelte";
+    import Content from "src/lib/Content.svelte";
+    import NavBar from "src/lib/NavBar.svelte";
+    import { peakStarts } from "src/stores";
 
     let backgroundImages = [
         "backgrounds/hw23.png",
@@ -10,14 +11,14 @@
         "backgrounds/ad24.jpg",
         "backgrounds/rsecon23.jpg",
         // "backgrounds/ad23.jpg",
-    ]
+    ];
 
     // curY = current y-coordinate; pictureNumber = 0, 1, 2, ...
     // peakStarts = array, i-th element is when the i-th picture should be fully faded in
     function getOpacity(curY: number, pictureNumber: number): number {
         // How many pixels the crossfade effect should work over, i.e. how many
         // pixels it takes to fade out an image and fade in the next one
-        const a: number = 300;  
+        const a: number = 300;
         const maxOpacity: number = 0.7;
 
         // Handle the case where $peakStarts is not yet initialised
@@ -32,16 +33,17 @@
         // b)) + b pixels, and be completely faded out at (N + 1) * (a + b)
         // pixels. The following formulae calculate the appropriate opacity.
         let peakStart: number = $peakStarts[pictureNumber];
-        let peakEnd: number = pictureNumber < backgroundImages.length - 1
-            ? $peakStarts[pictureNumber + 1] - a
-            : peakStart + 10000000; // some large number to make sure it's always > curY
+        let peakEnd: number =
+            pictureNumber < backgroundImages.length - 1
+                ? $peakStarts[pictureNumber + 1] - a
+                : peakStart + 10000000; // some large number to make sure it's always > curY
         if (curY < peakStart) {
-            return Math.max(0, maxOpacity * (1 - (peakStart - curY) / a));
-        }
-        else if (curY > peakEnd) {
+            return pictureNumber === 0
+                ? maxOpacity
+                : Math.max(0, maxOpacity * (1 - (peakStart - curY) / a));
+        } else if (curY > peakEnd) {
             return Math.max(0, maxOpacity * (1 - (curY - peakEnd) / a));
-        }
-        else {
+        } else {
             return maxOpacity;
         }
     }
@@ -57,9 +59,10 @@
 
 <svelte:window bind:scrollY={y} />
 {#each backgroundImages as imagePath, i}
-    <BackgroundImage imagePath={imagePath} opacity={opacities[i]} />
+    <BackgroundImage {imagePath} opacity={opacities[i]} />
 {/each}
 
+<NavBar />
 <main>
     <Content />
 </main>
