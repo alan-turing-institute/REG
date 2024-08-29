@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - svelte
+      - main
 
 name: Publish Svelte
 
@@ -26,7 +26,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm build --base /REG/svelte
+        run: pnpm build --base /REG
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
