@@ -6,6 +6,7 @@
 
     import ua from "src/assets/ua.png";
     import turingjl from "src/assets/turingjl.png";
+    import ai4nwp from "src/assets/ai4nwp.png";
 
     type Project = {
         href: string;
@@ -22,10 +23,10 @@
             description: "This space could be yours!",
         },
         {
-            href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-            imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
-            title: "Project B",
-            description: "This space could be yours!",
+            href: "https://www.turing.ac.uk/research/research-projects/ai-numerical-weather-prediction-nwp-ai4nwp",
+            imgSrc: ai4nwp,
+            title: "AI for Numerical Weather Prediction",
+            description: "A collaboration with the Met Office on the use of modern AI techniques for weather forecasting.",
         },
         {
             href: "https://urban-analytics-technology-platform.github.io/",

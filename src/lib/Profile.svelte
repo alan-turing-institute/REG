@@ -1,5 +1,9 @@
 <script lang="ts">
     import GridCol from "src/lib/grid-col/GridCol.svelte";
+    
+    //technically reg ++
+    import regTeam from "src/assets/reg_team.jpg";
+    import atiSpace from "src/assets/ati_space.jpg";
 </script>
 
 <div id="container">
@@ -18,7 +22,7 @@
     <div id="profile">
         <GridCol
             href="https://www.turing.ac.uk/research/research-engineering/meet-the-team"
-            imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+            imgSrc={regTeam}
             title="Meet the team"
         >
             <p>
@@ -29,7 +33,7 @@
 
         <GridCol
             href="https://www.turing.ac.uk/"
-            imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+            imgSrc={atiSpace}
             title="The Alan Turing Institute"
         >
             <p>

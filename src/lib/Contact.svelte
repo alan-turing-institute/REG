@@ -9,13 +9,9 @@
     love to hear from you!
 </p>
 
-<Grid>
-    <GridRow
-        pictureFirst={true}
-        href={null}
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-        title="Careers"
-    >
+<div id="grid-container">
+    <div class="grid-item">
+        <h3>Careers</h3>
         <p>
             We will be recruiting in the near future, hopefully in autumn 2024!
             You can <a
@@ -30,14 +26,10 @@
                 >subscribe to our mailing list here</a
             >.
         </p>
-    </GridRow>
+    </div>
 
-    <GridRow
-        pictureFirst={false}
-        href={null}
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-        title="Follow us on social media"
-    >
+    <div class="grid-item">
+        <h3>Follow us on social media</h3>
         <p>
             Although we spend most of our time contributing code on GitHub, you
             can also find us on <a
@@ -48,14 +40,10 @@
             <a href="https://twitter.com/turinghut23" target="_blank">Twitter</a
             >.
         </p>
-    </GridRow>
+    </div>
 
-    <GridRow
-        pictureFirst={true}
-        href={null}
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-        title="Email us"
-    >
+    <div class="grid-item">
+        <h3>Email us</h3>
         <p>
             For any questions about recruitment, you can drop a line to <Email
                 address="reg-recruitment-inbox"
@@ -70,14 +58,10 @@
             For all other queries, please contact Martin O'Reilly, Director of
             Research Engineering (<Email address="moreilly" />).
         </p>
-    </GridRow>
+    </div>
 
-    <GridRow
-        pictureFirst={false}
-        href={null}
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-        title="Our offices"
-    >
+    <div class="grid-item">
+        <h3>Our offices</h3>
         <p>
             The Alan Turing Institute is located in the British Library, at <a
                 href="https://maps.app.goo.gl/Xj3ZmJPDwwD8RKMf7"
@@ -86,13 +70,41 @@
         </p>
         <p>
             If you would like to arrange a visit, please do get in touch as we
-            have to request a visitor&rsquo;s pass.
+            have to request a visitor&rsquo;s pass in advance.
         </p>
-    </GridRow>
-</Grid>
+    </div>
+</div>
 
 <style>
     p {
+        margin: 0;
+    }
+
+    div#grid-container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+        div#grid-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    div.grid-item {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 0.9em;
+    }
+
+    h3 {
         margin: 0;
     }
 </style>
