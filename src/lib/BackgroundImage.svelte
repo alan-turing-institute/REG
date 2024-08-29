@@ -3,8 +3,12 @@
     export let opacity: number;
 </script>
 
-<div class="background-image" style="background-image: {`url(${imagePath})`}; opacity: {opacity}">
-</div>
+<svelte:head><link rel="preload" href={imagePath} as="image" /></svelte:head>
+
+<div
+    class="background-image"
+    style="background-image: {`url(${imagePath})`}; opacity: {opacity}"
+></div>
 
 <style>
     .background-image {
