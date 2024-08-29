@@ -1,8 +1,12 @@
 <script lang="ts">
     import GridCol from "src/lib/grid-col/GridCol.svelte";
+    import { onMount } from "svelte";
 
-    import scrollLeft from "src/assets/left.png";
-    import scrollRight from "src/assets/right.png";
+    import sLeft from "src/assets/sLeft.png";
+    import sRight from "src/assets/sRight.png";
+    import sNoLeft from "src/assets/sNoLeft.png";
+    import sNoRight from "src/assets/sNoRight.png";
+
     import wordCloud from "src/assets/wordcloud.png";
     import ua from "src/assets/ua.png";
     import turingjl from "src/assets/turingjl.png";
@@ -89,7 +93,8 @@
         href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
         imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
         title: "Your project?",
-        description: "This space could be yours! Simply contact Penny on Slack for some free advertising.",
+        description:
+            "This space could be yours! Simply contact Penny on Slack for some free advertising.",
     });
 
     let galleryElem: HTMLDivElement;
@@ -116,7 +121,28 @@
             left: targetX,
             behavior: "smooth",
         });
+        // have to pass targetX as an argument because otherwise it will use the
+        // current scroll position, which takes a while to update due to the
+        // smooth scrolling
+        updateCanScrolls(targetX);
     }
+
+    let canScrollLeft: boolean = false;
+    let canScrollRight: boolean = true;
+    // Update canScrollLeft and canScrollRight based on the current scroll
+    // position, or the desired scroll position if targetX is provided
+    function updateCanScrolls(targetX: number | null = null) {
+        if (targetX === null) {
+            targetX = galleryElem.scrollLeft;
+        }
+
+        canScrollLeft = galleryElem !== undefined && targetX > 0;
+        canScrollRight =
+            galleryElem !== undefined &&
+            targetX + galleryElem.clientWidth < galleryElem.scrollWidth;
+        console.log(canScrollLeft, canScrollRight);
+    }
+    onMount(updateCanScrolls);
 </script>
 
 <p>
@@ -135,9 +161,19 @@
 
 <div id="gallery-container-container">
     <button on:click={() => scrollGallery(-1)}>
-        <img src={scrollLeft} alt="Scroll left" class="scroll" />
+        {#if canScrollLeft}
+            <img src={sLeft} alt="Scroll left" class="scroll" />
+        {:else}
+            <img src={sNoLeft} alt="Scroll left disabled" class="scroll" />
+        {/if}
     </button>
-    <div id="gallery-container" bind:this={galleryElem}>
+    <div
+        id="gallery-container"
+        bind:this={galleryElem}
+        on:scroll={() => {
+            updateCanScrolls();
+        }}
+    >
         <div id="gallery">
             {#each projects as project}
                 <GridCol
@@ -151,7 +187,11 @@
         </div>
     </div>
     <button on:click={() => scrollGallery(1)}>
-        <img src={scrollRight} alt="Scroll right" class="scroll" />
+        {#if canScrollRight}
+            <img src={sRight} alt="Scroll right" class="scroll" />
+        {:else}
+            <img src={sNoRight} alt="Scroll right disabled" class="scroll" />
+        {/if}
     </button>
 </div>
 
