@@ -5,7 +5,7 @@
     import WorkingWays from "src/lib/WorkingWays.svelte";
     import Contact from "src/lib/Contact.svelte";
     import { onMount } from "svelte";
-    import { peakStarts } from "src/stores";
+    import { headings, peakStarts } from "src/stores";
 
     // Code to get y-coordinates of headings
     let profileH2: HTMLHeadingElement;
@@ -14,25 +14,23 @@
     let contactH2: HTMLHeadingElement;
     let workH2: HTMLHeadingElement;
     function setPeakStarts() {
+        if ($headings === null) {
+            return;
+        }
         // Expected value for the first element of $peakStarts. We set this
         // as a kind of normalisation, because getBoundingClientRect() depends
         // on the scroll position, so we can't just use the raw values.
         const first = -80;
-        const offset = profileH2.getBoundingClientRect().top - first;
-        // 200 ms delay for Safari :eyeroll:
-        // https://stackoverflow.com/questions/26347742
-        setTimeout(() => {
-            $peakStarts = [
-                profileH2.getBoundingClientRect().top - offset,
-                researchH2.getBoundingClientRect().top - offset,
-                examplesH2.getBoundingClientRect().top - offset,
-                workH2.getBoundingClientRect().top - offset,
-                contactH2.getBoundingClientRect().top - offset,
-            ];
-        }, 200);
+        const offset = $headings[0].getBoundingClientRect().top - first;
+        $peakStarts = $headings.map(
+            (h: HTMLHeadingElement) => h.getBoundingClientRect().top - offset,
+        );
     }
     onMount(() => {
-        setPeakStarts();
+        $headings = [profileH2, researchH2, examplesH2, workH2, contactH2];
+        // 200 ms delay for Safari :eyeroll:
+        // https://stackoverflow.com/questions/26347742
+        setTimeout(setPeakStarts, 200);
     });
 </script>
 

@@ -28,16 +28,10 @@
             description: "This space could be yours!",
         },
         {
-            href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-            imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
-            title: "Project C",
-            description: "This space could be yours!",
-        },
-        {
             href: "https://urban-analytics-technology-platform.github.io/",
             imgSrc: ua,
             title: "Urban Analytics",
-            description: "A collection of open-source software to model cities and their residents, and to help in creating more sustainable spaces.",
+            description: "A collection of open-source software to improve how we design, interact with, and live in urban spaces.",
         },
         {
             href: "https://turinglang.org/",

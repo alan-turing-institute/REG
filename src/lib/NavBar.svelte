@@ -1,8 +1,26 @@
 <script lang="ts">
-    import { peakStarts } from "src/stores";
+    import { headings, peakStarts } from "src/stores";
     import logo from "src/assets/ati.png";
 
+    // This function is copied from Content.svelte. I don't know how to reuse
+    // the code without putting it in stores.ts which is ugly because we can't
+    // use $stores syntax
+    function setPeakStarts() {
+        if ($headings === null) {
+            return;
+        }
+        // Expected value for the first element of $peakStarts. We set this
+        // as a kind of normalisation, because getBoundingClientRect() depends
+        // on the scroll position, so we can't just use the raw values.
+        const first = -80;
+        const offset = $headings[0].getBoundingClientRect().top - first;
+        $peakStarts = $headings.map(
+            (h: HTMLHeadingElement) => h.getBoundingClientRect().top - offset,
+        );
+    }
+
     function scrollToSection(sectionNumber: number) {
+        setPeakStarts();
         if ($peakStarts === null) {
             // Not yet initialised
             return;
