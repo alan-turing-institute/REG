@@ -19,19 +19,19 @@
             href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
             imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
             title: "Project A",
-            description: "Description of project A",
+            description: "This space could be yours!",
         },
         {
             href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
             imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
             title: "Project B",
-            description: "Description of project B",
+            description: "This space could be yours!",
         },
         {
             href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
             imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
             title: "Project C",
-            description: "Description of project C",
+            description: "This space could be yours!",
         },
         {
             href: "https://urban-analytics-technology-platform.github.io/",
