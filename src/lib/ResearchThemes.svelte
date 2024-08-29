@@ -14,7 +14,7 @@
 
 <p>Click on each of these links to learn more.</p>
 
-<Grid id="container">
+<Grid>
     <GridRow
         pictureFirst={true}
         href="https://www.turing.ac.uk/research/transformation-health"

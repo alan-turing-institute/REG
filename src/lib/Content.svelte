@@ -2,7 +2,7 @@
     import Profile from "src/lib/Profile.svelte";
     import ResearchThemes from "src/lib/ResearchThemes.svelte";
     import Projects from "src/lib/Projects.svelte";
-    import WorkingWays from "src/lib/WorkingWays.svelte";
+    import WorkHow from "src/lib/WorkHow.svelte";
     import Contact from "src/lib/Contact.svelte";
     import { onMount } from "svelte";
     import { headings, peakStarts } from "src/stores";
@@ -54,7 +54,7 @@
 
     <div class="content-box">
         <h2 bind:this={workH2}>How we work</h2>
-        <WorkingWays />
+        <WorkHow />
     </div>
 
     <div class="content-box">

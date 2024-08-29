@@ -43,7 +43,7 @@
             <li><button on:click={() => scrollToSection(0)}>About us</button></li>
             <li><button on:click={() => scrollToSection(1)}>Research</button></li>
             <li><button on:click={() => scrollToSection(2)}>Projects</button></li>
-            <li><button on:click={() => scrollToSection(3)}>Working ways</button></li>
+            <li><button on:click={() => scrollToSection(3)}>How we work</button></li>
             <li><button on:click={() => scrollToSection(4)}>Contact</button></li>
 
         </ul>

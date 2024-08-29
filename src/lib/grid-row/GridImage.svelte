@@ -28,9 +28,8 @@
         margin: 0;
         padding: 0;
         min-width: 100px;
-        width: 20%;
-        max-width: 200px;
-        max-height: 200px;
+        width: 30%;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
