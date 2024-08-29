@@ -5,7 +5,7 @@
     import { peakStarts } from "src/stores";
 
     let backgroundImages = [
-        "backgrounds/hw23.png",
+        "backgrounds/hw23.jpg",
         "backgrounds/hw24.jpg",
         "backgrounds/aiuk24.jpg",
         "backgrounds/ad24.jpg",
