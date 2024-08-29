@@ -1,12 +1,17 @@
 <script lang="ts">
     import GridCol from "src/lib/grid-col/GridCol.svelte";
+
     import scrollLeft from "src/assets/left.png";
     import scrollRight from "src/assets/right.png";
     import wordCloud from "src/assets/wordcloud.png";
-
     import ua from "src/assets/ua.png";
     import turingjl from "src/assets/turingjl.png";
     import ai4nwp from "src/assets/ai4nwp.png";
+    import dsh from "src/assets/dsh.png";
+    import mapreader from "src/assets/mapreader.png";
+    import nats from "src/assets/nats.png";
+    import eider from "src/assets/eider.png";
+    import scivision from "src/assets/scivision.jpg";
 
     type Project = {
         href: string;
@@ -17,30 +22,75 @@
 
     let projects: Project[] = [
         {
-            href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-            imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
-            title: "Project A",
-            description: "This space could be yours!",
-        },
-        {
             href: "https://www.turing.ac.uk/research/research-projects/ai-numerical-weather-prediction-nwp-ai4nwp",
             imgSrc: ai4nwp,
-            title: "AI for Numerical Weather Prediction",
-            description: "A collaboration with the Met Office on the use of modern AI techniques for weather forecasting.",
+            title: "AI4NWP",
+            description:
+                "A collaboration with the Met Office on the use of modern AI techniques for weather forecasting.",
         },
         {
-            href: "https://urban-analytics-technology-platform.github.io/",
-            imgSrc: ua,
-            title: "Urban Analytics",
-            description: "A collection of open-source software to improve how we design, interact with, and live in urban spaces.",
+            href: "https://github.com/alan-turing-institute/data-safe-haven",
+            imgSrc: dsh,
+            title: "Data Safe Haven",
+            description:
+                "A framework to create secure environments for sensitive data analysis.",
+        },
+        {
+            href: "https://github.com/alan-turing-institute/eider",
+            imgSrc: eider,
+            title: "Eider",
+            description:
+                "An R package for declarative preprocessing of health data for machine learning models.",
+        },
+        {
+            href: "https://github.com/maps-as-data/MapReader",
+            imgSrc: mapreader,
+            title: "MapReader",
+            description:
+                "A computer vision tool to identify visual elements in images, particularly historical maps.",
+        },
+        {
+            href: "https://www.turing.ac.uk/research/research-programmes/project-bluebird",
+            imgSrc: nats,
+            title: "Project Bluebird",
+            description:
+                "Developing AI for air traffic control in collaboration with NATS.",
+        },
+        {
+            href: "https://sci.vision/",
+            imgSrc: scivision,
+            title: "Scivision",
+            description:
+                "A platform for computer vision models and datasets across the sciences and humanities.",
         },
         {
             href: "https://turinglang.org/",
             imgSrc: turingjl,
             title: "Turing.jl",
-            description: "A Julia library for general-purpose probabilistic programming and Bayesian inference.",
+            description:
+                "A Julia library for general-purpose probabilistic programming and Bayesian inference.",
+        },
+        {
+            href: "https://urban-analytics-technology-platform.github.io/",
+            imgSrc: ua,
+            title: "Urban Analytics",
+            description:
+                "A collection of open-source software to improve how we design, interact with, and live in urban spaces.",
         },
     ];
+
+    // Shuffle projects
+    for (let i = projects.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [projects[i], projects[j]] = [projects[j], projects[i]];
+    }
+    // Add in advertisement at the front
+    projects.unshift({
+        href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
+        imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+        title: "Your project?",
+        description: "This space could be yours! Simply contact Penny on Slack for some free advertising.",
+    });
 
     let galleryElem: HTMLDivElement;
     let currentProject: number = 0;
@@ -70,8 +120,8 @@
 </script>
 
 <p>
-    Most of our work is open-source. You can see a list of repositories we have
-    worked on in <a
+    Most of our work is open-source, with some exceptions due to contractual
+    limitations. You can see a list of repositories we have worked on in <a
         href="https://github.com/search?q=topic%3Ahut23+org%3Aalan-turing-institute+fork%3Atrue&type=repositories"
         target="_blank"
         >the <span class="monospace">alan-turing-institute</span> GitHub organisation</a
@@ -79,7 +129,7 @@
 </p>
 
 <p>
-    Here is a sample of some of the projects we are currently working on. This
+    Here is a sample of some of the projects we have worked on in 2024. This
     list is not exhaustive!
 </p>
 
@@ -106,9 +156,9 @@
 </div>
 
 <p>
-    The following word cloud was generated from a (slightly unscientific)
-    survey of languages and technologies we have used in REG. The most common
-    language we use is Python, but there are many others!
+    The following word cloud was generated from a (slightly unscientific) survey
+    of languages and technologies we have used in REG. The most common language
+    we use is Python, but there are many others!
 </p>
 
 <img
@@ -120,7 +170,7 @@
 <style>
     .monospace {
         font-family: monospace;
-        font-size: 90%;
+        font-size: 95%;
     }
 
     div#gallery-container-container {
@@ -152,7 +202,7 @@
         width: max-content;
         grid-auto-flow: column;
         grid-template-rows: 1fr max-content max-content;
-        grid-template-columns: repeat(5, 200px);
+        grid-template-columns: repeat(9, 200px);
         gap: 10px 40px;
     }
 
