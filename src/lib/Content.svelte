@@ -14,9 +14,11 @@
     let contactH2: HTMLHeadingElement;
     let workH2: HTMLHeadingElement;
     function setPeakStarts() {
-        // Make this positive to make the image change before the heading
-        // reaches the top of the page
-        const offset = 115;
+        // Expected value for the first element of $peakStarts. We set this
+        // as a kind of normalisation, because getBoundingClientRect() depends
+        // on the scroll position, so we can't just use the raw values.
+        const first = -80;
+        const offset = profileH2.getBoundingClientRect().top - first;
         // 200 ms delay for Safari :eyeroll:
         // https://stackoverflow.com/questions/26347742
         setTimeout(() => {
