@@ -2,10 +2,7 @@
     import GridCol from "src/lib/grid-col/GridCol.svelte";
     import scrollLeft from "src/assets/left.png";
     import scrollRight from "src/assets/right.png";
-    import noScrollLeft from "src/assets/noleft.png";
-    import noScrollRight from "src/assets/noright.png";
     import wordCloud from "src/assets/wordcloud.png";
-    import { onMount } from "svelte";
 
     type Project = {
         href: string;
@@ -19,7 +16,7 @@
             href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
             imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
             title: "Project A",
-            description: "Description of project A",
+            description: "Descriptionof project A",
         },
         {
             href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
@@ -49,10 +46,12 @@
 
     let galleryElem: HTMLDivElement;
     let currentProject: number = 0;
-    let maxCurrentProject: number;
     function scrollGallery(direction: number) {
         currentProject += direction;
         // Ensure that project index is within bounds
+        const maxCurrentProject = Math.ceil(
+            (galleryElem.scrollWidth - galleryElem.clientWidth) / 240,
+        );
         currentProject = Math.max(
             0,
             Math.min(currentProject, maxCurrentProject),
@@ -70,20 +69,7 @@
             behavior: "smooth",
         });
     }
-
-    function setMaxCurrentProject() {
-        maxCurrentProject = Math.ceil(
-            (galleryElem.scrollWidth - galleryElem.clientWidth) / 240,
-        );
-    }
-
-    onMount(() => {
-        setMaxCurrentProject();
-        console.log(maxCurrentProject);
-    });
 </script>
-
-<svelte:window on:resize={setMaxCurrentProject} />
 
 <p>
     Most of our work is open-source. You can see a list of repositories we have
@@ -101,11 +87,7 @@
 
 <div id="gallery-container-container">
     <button on:click={() => scrollGallery(-1)}>
-        <img
-            src={currentProject === 0 ? noScrollLeft : scrollLeft}
-            alt="Scroll left"
-            class="scroll"
-        />
+        <img src={scrollLeft} alt="Scroll left" class="scroll" />
     </button>
     <div id="gallery-container" bind:this={galleryElem}>
         <div id="gallery">
@@ -121,20 +103,14 @@
         </div>
     </div>
     <button on:click={() => scrollGallery(1)}>
-        <img
-            src={currentProject === maxCurrentProject
-                ? noScrollRight
-                : scrollRight}
-            alt="Scroll right"
-            class="scroll"
-        />
+        <img src={scrollRight} alt="Scroll right" class="scroll" />
     </button>
 </div>
 
 <p>
-    The following word cloud was generated from a (slightly unscientific) survey
-    of languages and technologies we have used in REG. The most common language
-    we use is Python, but there are many others!
+    The following word cloud was generated from a (slightly unscientific)
+    survey of languages and technologies we have used in REG. The most common
+    language we use is Python, but there are many others!
 </p>
 
 <img
