@@ -5,12 +5,12 @@
     import { peakStarts } from "src/stores";
 
     let backgroundImages = [
-        "backgrounds/hw23.jpg",
-        "backgrounds/hw24.jpg",
         "backgrounds/aiuk24.jpg",
+        "backgrounds/hw24.jpg",
         "backgrounds/ad24.jpg",
         "backgrounds/rsecon23.jpg",
-        // "backgrounds/ad23.jpg",
+        "backgrounds/ad23.jpg",
+        // "backgrounds/hw23.jpg", // bad aspect ratio for background
     ];
 
     // curY = current y-coordinate; pictureNumber = 0, 1, 2, ...
