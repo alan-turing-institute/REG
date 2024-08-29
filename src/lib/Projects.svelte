@@ -147,7 +147,7 @@
 <p>
     Most of our work is open-source, with some exceptions due to contractual
     limitations. You can see a list of repositories we have worked on in <a
-        href="https://github.com/search?q=topic%3Ahut23+org%3Aalan-turing-institute+fork%3Atrue&type=repositories"
+        href="https://github.com/search?q=topic%3Ahut23+org%3Aalan-turing-institute+fork%3Atrue&type=repositories&s=updated&o=desc"
         target="_blank"
         >the <span class="monospace">alan-turing-institute</span> GitHub organisation</a
     >.
