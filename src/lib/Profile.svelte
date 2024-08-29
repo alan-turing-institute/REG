@@ -19,7 +19,7 @@
         <GridCol
             href="https://www.turing.ac.uk/research/research-engineering/meet-the-team"
             imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-            title="Meet the Research Engineering team"
+            title="Meet the team"
         >
             <p>
                 Learn more about our three job roles, and meet some of the

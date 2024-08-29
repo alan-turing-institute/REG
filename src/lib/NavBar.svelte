@@ -77,10 +77,12 @@
         border: none;
         font-size: 1em;
         cursor: pointer;
+        transition: color 0.3s;
     }
 
     button:hover {
         text-decoration: underline;
+        color: #026070;
     }
 
     @media (max-width: 944px) {
