@@ -5,22 +5,25 @@
 
 <svelte:head><link rel="preload" href={imagePath} as="image" /></svelte:head>
 
-<div
-    class="background-image"
-    style="background-image: {`url(${imagePath})`}; opacity: {opacity}"
-></div>
+<picture style="--opacity: {opacity}">
+    <img src={imagePath} alt="" />
+</picture>
 
 <style>
-    .background-image {
-        background-image: var(--background-image);
-        background-size: cover;
-        background-position: center;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    picture {
         position: fixed;
+        overflow: hidden;
         opacity: var(--opacity);
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         z-index: -1;
     }
 </style>
