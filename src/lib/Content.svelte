@@ -75,7 +75,8 @@
     div.content-box {
         opacity: 0.92;
         border-radius: 10px;
-        background-color: #dce2e3;
+        background-color: #f7f4ea;
+        box-shadow: 0 0 10px 0 rgba(111, 93, 32, 0.5);
         padding: 30px;
         display: flex;
         flex-direction: column;

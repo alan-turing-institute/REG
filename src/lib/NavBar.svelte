@@ -56,10 +56,10 @@
         top: 0;
         width: 100%;
         height: 50px;
-        background-color: #dce2e3;
+        background-color: #ded9e2;
+        box-shadow: 0 0 10px 0 rgba(69, 47, 87, 0.5);
         z-index: 2;
         opacity: 1;
-        border-bottom: 2px solid #000;
         display: flex;
         flex-direction: row;
         padding: 5px 20px;
