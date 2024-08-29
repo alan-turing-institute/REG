@@ -16,7 +16,7 @@
             href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
             imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
             title: "Project A",
-            description: "Descriptionof project A",
+            description: "Description of project A",
         },
         {
             href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
@@ -149,7 +149,7 @@
 
     div#gallery {
         overflow-x: scroll;
-        padding: 10px 0;
+        padding: 10px;
         display: grid;
         width: max-content;
         grid-auto-flow: column;
