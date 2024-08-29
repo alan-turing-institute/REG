@@ -4,6 +4,9 @@
     import scrollRight from "src/assets/right.png";
     import wordCloud from "src/assets/wordcloud.png";
 
+    import ua from "src/assets/ua.png";
+    import turingjl from "src/assets/turingjl.png";
+
     type Project = {
         href: string;
         imgSrc: string;
@@ -31,16 +34,16 @@
             description: "Description of project C",
         },
         {
-            href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-            imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
-            title: "Project D",
-            description: "Description of project D",
+            href: "https://urban-analytics-technology-platform.github.io/",
+            imgSrc: ua,
+            title: "Urban Analytics",
+            description: "A collection of open-source software to model cities and their residents, and to help in creating more sustainable spaces.",
         },
         {
-            href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-            imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg",
-            title: "Project E",
-            description: "Description of project E",
+            href: "https://turinglang.org/",
+            imgSrc: turingjl,
+            title: "Turing.jl",
+            description: "A Julia library for general-purpose probabilistic programming and Bayesian inference.",
         },
     ];
 
