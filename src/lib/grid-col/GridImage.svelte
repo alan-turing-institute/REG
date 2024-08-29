@@ -28,6 +28,6 @@
 
     img.hovered {
         opacity: 0.9;
-        box-shadow: 0 0 5px 2px #02444f;
+        box-shadow: 0 0 5px 2px #026070;
     }
 </style>

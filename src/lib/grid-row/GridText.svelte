@@ -47,7 +47,7 @@
     }
 
     a.hovered {
-        color: #02444f;
+        color: #026070;
     }
 
     div.text {

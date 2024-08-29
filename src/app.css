@@ -42,3 +42,11 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+a {
+    color: black;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #026070;
+}
