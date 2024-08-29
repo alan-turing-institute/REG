@@ -26,7 +26,6 @@
             return pictureNumber === 0 ? maxOpacity : 0;
         }
 
-        console.log($peakStarts);
         // The first image should begin its max opacity at 0; it should start
         // fading out at b pixels, and be completely faded out at a + b pixels.
         // Thus, the N-th image should begin its max opacity at N * (a + b)

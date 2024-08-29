@@ -140,7 +140,6 @@
         canScrollRight =
             galleryElem !== undefined &&
             targetX + galleryElem.clientWidth < galleryElem.scrollWidth;
-        console.log(canScrollLeft, canScrollRight);
     }
     onMount(updateCanScrolls);
 </script>
