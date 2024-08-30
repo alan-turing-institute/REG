@@ -15,8 +15,6 @@
     in data science and AI, which spans all of these themes.
 </p>
 
-<p>(Something about DSaP?!)</p>
-
 <p>Click on each of these links to learn more.</p>
 
 <Grid>
@@ -30,15 +28,15 @@
             To transform health and enable better outcomes for all
         </p>
         <p class="small">
-            There are many challenges which will need to be addressed to ensure
-            the future health of the population, including the demographic
-            pressures of an ageing population, increasing levels of multiple
-            long term conditions, the rising personal and societal costs of poor
-            health and persistent inequalities in health outcomes across
-            populations. To solve these it will be necessary to take a more
-            integrated approach across multiple fields. The revolution in data
-            science and AI enables a more proactive focus on the prevention, the
-            earlier identification of disease, and earlier better targeted
+            There are many challenges which need to be addressed to ensure the
+            future health of the population, including the demographic pressures
+            of an ageing population, increasing levels of multiple long term
+            conditions, the rising personal and societal costs of poor health,
+            and persistent inequalities in health outcomes across populations.
+            To solve these it will be necessary to take a more integrated
+            approach across multiple fields. The revolution in data science and
+            AI enables a more proactive focus on the prevention, the earlier
+            identification of disease, and earlier and better targeted
             interventions to improve health for all.
         </p>
     </GridRow>
@@ -56,7 +54,7 @@
         <p class="small">
             The world is under threat from the twin crises of climate change and
             biodiversity loss. We understand the causes: they include climate
-            change, land use change and pollution. To act on this we need to
+            change, land use change, and pollution. To act on this we need to
             slow the pace of global heating, predict and mitigate climate
             impacts, and provide clear evidence to develop national and
             international policy to meet net zero targets. At the Turing we are
@@ -73,13 +71,13 @@
         title="Defence and National Security"
     >
         <p class="quote small">
-            To protect the UK, its people and the places they inhabit
+            To protect the UK, its people, and the places they inhabit
         </p>
         <p class="small">
             The explosion of human connectivity and information availability
             creates new ways in which bad actors can cause harm to people,
             businesses, and societies, and makes it harder for defence and
-            security agencies to identify, and act on insights. The UK must
+            security agencies to identify and act on insights. The UK must
             continue to stay ahead in researching, developing, and integrating
             technologies to meet these challenges. The Turing is committed to
             working providing better analysis of data at scale, helping to find
@@ -98,17 +96,18 @@
         title="Foundational Research"
     >
         <p class="small">
-            Fundamental research in data science and artificial intelligence is
-            a key capability in the Turing 2.0 strategy, to support the delivery
-            of strategic goals and enable the application of AI methodology
-            across the three grand challenges. The initial focus is on the
-            development is AI for physical systems, with the aim of developing
-            the next generation of foundational methods, tools and theory to
-            enable modelling, prediction and control of physical systems. This
-            will focus on three strands: probabilistic and generative models for
-            modelling and prediction of physical systems; bridging the divide
-            between data-driven and mechanistic models; and accelerating
-            large-scale computational simulations through machine learning.
+            Foundational research in data science and artificial intelligence is
+            a key capability in the Turing&rsquo;s strategy, to support the
+            delivery of strategic goals and enable the application of AI
+            methodology across the three grand challenges. The initial focus is
+            on the development is AI for physical systems, with the aim of
+            developing the next generation of foundational methods, tools and
+            theory to enable modelling, prediction and control of physical
+            systems. This will focus on three strands: probabilistic and
+            generative models for modelling and prediction of physical systems;
+            bridging the divide between data-driven and mechanistic models; and
+            accelerating large-scale computational simulations through machine
+            learning.
         </p>
     </GridRow>
 </Grid>

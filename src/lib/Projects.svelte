@@ -78,7 +78,7 @@
         {
             href: "https://www.turing.ac.uk/research/research-projects/role-synthetic-data-financial-systems",
             imgSrc: hsbc,
-            title: "HSBC Synthetic Data",
+            title: "Synthetic Data",
             description:
                 "A project with HSBC exploring the generation and use of synthetic data in financial systems.",
         },
