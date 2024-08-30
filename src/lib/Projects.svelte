@@ -8,17 +8,22 @@
     import sNoRight from "src/assets/sNoRight.png";
 
     import wordCloud from "src/assets/wordcloud.png";
-    import ua from "src/assets/ua.png";
-    import turingjl from "src/assets/turingjl.png";
-    import ami from "src/assets/ami.png";
+
     import ai4nwp from "src/assets/ai4nwp.png";
+    import ami from "src/assets/ami.png";
+    import assurance from "src/assets/assurance.png";
+    import autspaces from "src/assets/autspaces.png";
     import dsh from "src/assets/dsh.png";
+    import eider from "src/assets/eider.png";
+    import hsbc from "src/assets/hsbc.jpg";
     import mapreader from "src/assets/mapreader.png";
     import nats from "src/assets/nats.png";
-    import eider from "src/assets/eider.png";
     import prompto from "src/assets/prompto.png";
+    import rcp from "src/assets/rcp.png";
     import scivision from "src/assets/scivision.jpg";
     import seshat from "src/assets/seshat.png";
+    import turingjl from "src/assets/turingjl.png";
+    import ua from "src/assets/ua.png";
 
     type Project = {
         href: string;
@@ -36,6 +41,27 @@
                 "A collaboration with the Met Office on the use of modern AI techniques for weather forecasting.",
         },
         {
+            href: "https://github.com/AMI-system",
+            imgSrc: ami,
+            title: "AMBER",
+            description:
+                "Developing a pipeline to automate the monitoring of biodiversity using edge processing and remote sensors.",
+        },
+        {
+            href: "https://github.com/alan-turing-institute/AssurancePlatform",
+            imgSrc: assurance,
+            title: "Assurance Platform",
+            description:
+                "An application for constructing trustworthy and ethical assurance cases for data-driven technologies.",
+        },
+        {
+            href: "https://github.com/alan-turing-institute/AutSPACEs",
+            imgSrc: autspaces,
+            title: "AutSPACEs",
+            description:
+                "A citizen science platform co-created by autistic people, their supporters, researchers, and the open source community."
+        },
+        {
             href: "https://github.com/alan-turing-institute/data-safe-haven",
             imgSrc: dsh,
             title: "Data Safe Haven",
@@ -48,6 +74,13 @@
             title: "Eider",
             description:
                 "An R package for declarative preprocessing of health data for machine learning models.",
+        },
+        {
+            href: "https://www.turing.ac.uk/research/research-projects/role-synthetic-data-financial-systems",
+            imgSrc: hsbc,
+            title: "HSBC Synthetic Data",
+            description:
+                "A project with HSBC exploring the generation and use of synthetic data in financial systems.",
         },
         {
             href: "https://github.com/maps-as-data/MapReader",
@@ -71,6 +104,13 @@
                 "Developing AI for air traffic control in collaboration with NATS.",
         },
         {
+            href: "https://www.turing.ac.uk/research/research-engineering/join-us/what-does-research-computing-engineer-do-turing",
+            imgSrc: rcp,
+            title: "Research Computing",
+            description:
+                "Managing the computing facilities that the Turing has access to, and training researchers to make the best use of them.",
+        },
+        {
             href: "https://sci.vision/",
             imgSrc: scivision,
             title: "Scivision",
@@ -90,13 +130,6 @@
             title: "Turing.jl",
             description:
                 "A Julia library for general-purpose probabilistic programming and Bayesian inference.",
-        },
-        {
-            href: "https://github.com/AMI-system",
-            imgSrc: ami,
-            title: "AMBER",
-            description:
-                "Developing a pipeline to automate the monitoring of biodiversity using edge processing and remote sensors.",
         },
         {
             href: "https://urban-analytics-technology-platform.github.io/",
@@ -197,7 +230,7 @@
             updateCanScrolls();
         }}
     >
-        <div id="gallery">
+        <div id="gallery" style="--projects-length: {String(projects.length)}">
             {#each projects as project}
                 <GridCol
                     href={project.href}
@@ -265,7 +298,7 @@
         width: max-content;
         grid-auto-flow: column;
         grid-template-rows: 1fr max-content max-content;
-        grid-template-columns: repeat(9, 200px);
+        grid-template-columns: repeat(16, 200px);
         gap: 10px 40px;
     }
 
