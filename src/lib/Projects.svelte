@@ -146,13 +146,13 @@
         [projects[i], projects[j]] = [projects[j], projects[i]];
     }
     // Add in advertisement at the front
-    projects.unshift({
-        href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-        imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
-        title: "Your project?",
-        description:
-            "This space could be yours! Simply contact Penny on Slack for some free advertising.",
-    });
+    // projects.unshift({
+    //     href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
+    //     imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+    //     title: "Your project?",
+    //     description:
+    //         "This space could be yours! Simply contact Penny on Slack for some free advertising.",
+    // });
 
     let galleryElem: HTMLDivElement;
     let currentProject: number = 0;
@@ -298,7 +298,7 @@
         width: max-content;
         grid-auto-flow: column;
         grid-template-rows: 1fr max-content max-content;
-        grid-template-columns: repeat(16, 200px);
+        grid-template-columns: repeat(15, 200px);
         gap: 10px 40px;
     }
 
