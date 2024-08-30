@@ -44,7 +44,7 @@
     </GridRow>
 
     <GridRow
-        pictureFirst={false}
+        pictureFirst={true}
         href="https://www.turing.ac.uk/research/environment-and-sustainability"
         imgSrc={eands}
         title="Environment and Sustainability"
@@ -92,7 +92,7 @@
     </GridRow>
 
     <GridRow
-        pictureFirst={false}
+        pictureFirst={true}
         href="https://www.turing.ac.uk/research/research-programmes/fundamental-ai"
         imgSrc={fundamentalai}
         title="Foundational Research"
