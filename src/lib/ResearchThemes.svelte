@@ -1,6 +1,11 @@
 <script lang="ts">
     import Grid from "src/lib/grid-row/Grid.svelte";
     import GridRow from "src/lib/grid-row/GridRow.svelte";
+
+    import eands from "src/assets/eands.png";
+    import health from "src/assets/health.png";
+    import dandns from "src/assets/dandns.png";
+    import fundamentalai from "src/assets/fundamentalai.png";
 </script>
 
 <p>
@@ -18,11 +23,11 @@
     <GridRow
         pictureFirst={true}
         href="https://www.turing.ac.uk/research/transformation-health"
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        imgSrc={health}
         title="Transformation of Health"
     >
         <p>
-		    "To transform health and enable better outcomes for all"
+	    "To transform health and enable better outcomes for all"
 
             There are many challenges which will need to be addressed to ensure the future health 
             of the population, including the demographic pressures of an ageing population, increasing 
@@ -38,13 +43,13 @@
     <GridRow
         pictureFirst={false}
         href="https://www.turing.ac.uk/research/environment-and-sustainability"
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        imgSrc={eands}
         title="Environment and Sustainability"
     >
         <p>
-			"To address the climate and biodiversity crisis and the need for greater sustainability"
+	    "To address the climate and biodiversity crisis and the need for greater sustainability"
 
-			The world is under threat from the twin crises of climate change and biodiversity loss. We 
+	    The world is under threat from the twin crises of climate change and biodiversity loss. We 
             understand the causes: they include climate change, land use change and pollution. To act on 
             this we need to slow the pace of global heating, predict and mitigate climate impacts, and 
             provide clear evidence to develop national and international policy to meet net zero targets. 
@@ -57,11 +62,11 @@
     <GridRow
         pictureFirst={true}
         href="https://www.turing.ac.uk/research/defence-and-national-security"
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        imgSrc={dandns}
         title="Defence and National Security"
     >
         <p>
-			"To protect the UK, its people and the places they inhabit"
+	    "To protect the UK, its people and the places they inhabit"
 			
             The explosion of human connectivity and information availability creates new ways in which
             bad actors can cause harm to people, businesses, and societies, and makes it harder for 
@@ -79,7 +84,7 @@
     <GridRow
         pictureFirst={false}
         href="https://www.turing.ac.uk/research/research-programmes/fundamental-ai"
-        imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
+        imgSrc={fundamentalai}
         title="Foundational Research"
     >
         <p>
