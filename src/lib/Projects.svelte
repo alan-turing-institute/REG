@@ -15,7 +15,9 @@
     import mapreader from "src/assets/mapreader.png";
     import nats from "src/assets/nats.png";
     import eider from "src/assets/eider.png";
+    import prompto from "src/assets/prompto.png";
     import scivision from "src/assets/scivision.jpg";
+    import seshat from "src/assets/seshat.png";
 
     type Project = {
         href: string;
@@ -54,6 +56,13 @@
                 "A computer vision tool to identify visual elements in images, particularly historical maps.",
         },
         {
+            href: "https://github.com/alan-turing-institute/prompto",
+            imgSrc: prompto,
+            title: "Prompto",
+            description:
+                "A Python library for asynchronous querying ofLLM endpoints.",
+        },
+        {
             href: "https://www.turing.ac.uk/research/research-programmes/project-bluebird",
             imgSrc: nats,
             title: "Project Bluebird",
@@ -64,6 +73,13 @@
             href: "https://sci.vision/",
             imgSrc: scivision,
             title: "Scivision",
+            description:
+                "A platform for computer vision models and datasets across the sciences and humanities.",
+        },
+        {
+            href: "https://seshatdata.com/core/world_map",
+            imgSrc: seshat,
+            title: "Seshat",
             description:
                 "A platform for computer vision models and datasets across the sciences and humanities.",
         },
@@ -79,7 +95,7 @@
             imgSrc: ua,
             title: "Urban Analytics",
             description:
-                "A collection of open-source software to improve how we design, interact with, and live in urban spaces.",
+                "A collection of software to improve how we design, interact with, and live in urban spaces.",
         },
     ];
 
