@@ -13,6 +13,13 @@
         // "backgrounds/hw23.jpg", // bad aspect ratio for background
     ];
 
+    function getCurrentSection(curY: number) {
+        if ($peakStarts === null) {
+            return 0;
+        }
+        return $peakStarts.filter((peakStart) => peakStart < curY).length - 1;
+    }
+
     // curY = current y-coordinate; pictureNumber = 0, 1, 2, ...
     // peakStarts = array, i-th element is when the i-th picture should be fully faded in
     function getOpacity(curY: number, pictureNumber: number): number {
@@ -49,11 +56,13 @@
     }
 
     let y: number = 0;
+    let currentSection: number = 0;
     let opacities: number[] = Array(backgroundImages.length).fill(0);
     $: {
         for (let i = 0; i < opacities.length; i++) {
             opacities[i] = getOpacity(y, i);
         }
+        currentSection = getCurrentSection(y);
     }
 </script>
 
@@ -62,7 +71,7 @@
     <BackgroundImage {imagePath} opacity={opacities[i]} />
 {/each}
 
-<NavBar />
+<NavBar bind:currentSection />
 <main>
     <Content />
 </main>

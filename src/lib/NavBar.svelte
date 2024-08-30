@@ -2,6 +2,8 @@
     import { headings, peakStarts } from "src/stores";
     import logo from "src/assets/ati.png";
 
+    export let currentSection: number;
+
     // This function is copied from Content.svelte. I don't know how to reuse
     // the code without putting it in stores.ts which is ugly because we can't
     // use $stores syntax
@@ -30,6 +32,14 @@
         const targetY = $peakStarts[sectionNumber] - offset;
         window.scrollTo({ top: targetY, behavior: "smooth" });
     }
+
+    const navbarItems = [
+        "About us",
+        "Research",
+        "Projects",
+        "How we work",
+        "Contact",
+    ];
 </script>
 
 <div id="navbar">
@@ -40,12 +50,16 @@
 
     <div id="navbar-right">
         <ul>
-            <li><button on:click={() => scrollToSection(0)}>About us</button></li>
-            <li><button on:click={() => scrollToSection(1)}>Research</button></li>
-            <li><button on:click={() => scrollToSection(2)}>Projects</button></li>
-            <li><button on:click={() => scrollToSection(3)}>How we work</button></li>
-            <li><button on:click={() => scrollToSection(4)}>Contact</button></li>
-
+            {#each navbarItems as item, i}
+                <li>
+                    <button
+                        on:click={() => scrollToSection(i)}
+                        class:active={i === currentSection}
+                    >
+                        {item}
+                    </button>
+                </li>
+            {/each}
         </ul>
     </div>
 </div>
@@ -62,7 +76,7 @@
         opacity: 1;
         display: flex;
         flex-direction: row;
-        padding: 5px 20px;
+        padding: 5px 30px;
         justify-content: space-between;
         align-items: center;
     }
@@ -91,16 +105,30 @@
     }
 
     button {
-        background-color: transparent;
+        color: #350942;
         border: none;
+        padding: 0 0 2px 0;
         font-size: 1em;
         cursor: pointer;
-        transition: color 0.3s;
+        transition: background-size 0.3s;
+        background:
+            linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0)
+                ),
+            linear-gradient(
+                to right,
+                rgba(186, 50, 227, 1),
+                rgba(124, 11, 158, 1)
+            );
+        background-size: 100% 2px, 0 2px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
     }
 
-    button:hover {
-        text-decoration: underline;
-        color: #026070;
+    button.active, button:hover {
+        background-size: 0 2px, 100% 2px;
     }
 
     @media (max-width: 944px) {
