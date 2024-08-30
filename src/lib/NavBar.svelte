@@ -1,6 +1,8 @@
 <script lang="ts">
     import { headings, peakStarts } from "src/stores";
     import logo from "src/assets/ati.png";
+    import menuIcon from "src/assets/menu.png";
+    import menuOpen from "src/assets/menuopen.png";
 
     export let currentSection: number;
 
@@ -33,6 +35,7 @@
         window.scrollTo({ top: targetY, behavior: "smooth" });
     }
 
+    let dropdownVisible = false;
     const navbarItems = [
         "About us",
         "Research",
@@ -44,17 +47,19 @@
 
 <div id="navbar">
     <div id="navbar-left">
-        <a class="logo" href="https://www.turing.ac.uk/">
+        <a class="logo" href="https://www.turing.ac.uk/" target="_blank">
             <img id="logo" src={logo} alt="The Alan Turing Institute logo" />
         </a>
         <h1>Research Engineering</h1>
     </div>
 
     <div id="navbar-right">
-        <ul>
+        <!-- normal -->
+        <ul id="navbar-normal">
             {#each navbarItems as item, i}
                 <li>
                     <button
+                        class="menu-link"
                         on:click={() => scrollToSection(i)}
                         class:active={i === currentSection}
                     >
@@ -63,6 +68,40 @@
                 </li>
             {/each}
         </ul>
+        <!-- dropdown for narrow screens -->
+        <button
+            id="dropdown"
+            on:click={() => {
+                dropdownVisible = !dropdownVisible;
+            }}
+            on:focusout={(e) => {
+                if (e.currentTarget.contains(e.relatedTarget)) {
+                    return;
+                }
+                dropdownVisible = false;
+            }}
+        >
+            {#if dropdownVisible}
+                <img src={menuOpen} alt="Close dropdown menu" />
+            {:else}
+                <img src={menuIcon} alt="Dropdown menu" />
+            {/if}
+            {#if dropdownVisible}
+                <ul id="navbar-dropdown">
+                    {#each navbarItems as item, i}
+                        <li>
+                            <button
+                                class="menu-link"
+                                on:click={() => scrollToSection(i)}
+                                class:active={i === currentSection}
+                            >
+                                {item}
+                            </button>
+                        </li>
+                    {/each}
+                </ul>
+            {/if}
+        </button>
     </div>
 </div>
 
@@ -90,7 +129,7 @@
     }
 
     h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
         margin: 0;
     }
 
@@ -105,7 +144,12 @@
         width: 90px;
     }
 
-    ul {
+    button#dropdown {
+        display: none;
+    }
+
+    ul#navbar-normal {
+        font-size: 0.9em;
         list-style-type: none;
         padding: 0;
         margin: 0;
@@ -113,8 +157,9 @@
         gap: 20px;
     }
 
-    button {
+    button.menu-link {
         color: #350942;
+        width: max-content;
         border: none;
         padding: 0 0 2px 0;
         font-size: 1em;
@@ -139,20 +184,64 @@
         background-repeat: no-repeat;
     }
 
-    button.active,
-    button:hover {
+    button.menu-link.active,
+    button.menu-link:hover {
         background-size:
             0 2px,
             100% 2px;
     }
-
-    @media (max-width: 944px) {
-        div#navbar-left {
-            margin: 0 auto;
+    
+    @media (max-width: 850px) {
+        ul#navbar-normal {
+            display: none;
         }
 
-        ul {
-            display: none;
+        button#dropdown {
+            display: block;
+            position: relative;
+            width: min-content;
+            height: 90%;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 7px;
+            background: none;
+        }
+
+        button#dropdown img {
+            width: 15px;
+            height: auto;
+        }
+
+        ul#navbar-dropdown {
+            list-style-type: none;
+            position: absolute;
+            top: 50%;
+            right: -2px;
+            background-color: #ded9e2;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: end;
+            padding: 5px 0 5px 10px;
+        }
+
+        ul#navbar-dropdown li {
+            padding: 2px 5px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 400px) {
+        div#navbar {
+            padding: 5px 10px;
+        }
+        img#logo {
+            width: 70px;
+        }
+        h1 {
+            font-size: 1em;
         }
     }
 </style>
