@@ -17,6 +17,11 @@
 </a>
 
 <style>
+    a, a:hover {
+        /* Override global style as we don't want images to be underlined */
+        background-size: 100% 0px, 0 2px;
+    }
+
     img {
         height: 100%;
         max-height: 200px;
@@ -28,6 +33,6 @@
 
     img.hovered {
         opacity: 0.9;
-        box-shadow: 0 0 5px 2px #026070;
+        box-shadow: 0 0 5px 2px #7c0b9e;
     }
 </style>
