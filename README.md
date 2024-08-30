@@ -13,4 +13,4 @@ pnpm install
 pnpm dev
 ```
 
-Then view the local version at `http://localhost:5173`.
+Then view the local version at `http://localhost:5173/REG/`.
