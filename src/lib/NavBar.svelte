@@ -201,6 +201,7 @@
             position: relative;
             width: min-content;
             height: 90%;
+            cursor: pointer;
             border: 1px solid black;
             border-radius: 5px;
             padding: 5px 7px;
