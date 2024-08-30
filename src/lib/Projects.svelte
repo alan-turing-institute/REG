@@ -10,6 +10,7 @@
     import wordCloud from "src/assets/wordcloud.png";
     import ua from "src/assets/ua.png";
     import turingjl from "src/assets/turingjl.png";
+    import ami from "src/assets/ami.png";
     import ai4nwp from "src/assets/ai4nwp.png";
     import dsh from "src/assets/dsh.png";
     import mapreader from "src/assets/mapreader.png";
@@ -73,6 +74,13 @@
             title: "Turing.jl",
             description:
                 "A Julia library for general-purpose probabilistic programming and Bayesian inference.",
+        },
+        {
+            href: "https://github.com/AMI-system",
+            imgSrc: ami,
+            title: "AMBER",
+            description:
+                "Developing a pipeline to automate the monitoring of biodiversity using edge processing and remote sensors.",
         },
         {
             href: "https://urban-analytics-technology-platform.github.io/",
