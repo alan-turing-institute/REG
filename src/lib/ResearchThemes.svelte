@@ -5,7 +5,7 @@
 
 <p>
     Research at the Turing is largely organised into three themes, namely:
-    Health; Environment and Sustainability; and Defence and National Security.
+    Transformation of Health; Environment and Sustainability; and Defence and National Security.
     Apart from these, we also carry out foundational research in data science
     and AI, which spans all of these themes.
 </p>
@@ -19,14 +19,19 @@
         pictureFirst={true}
         href="https://www.turing.ac.uk/research/transformation-health"
         imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
-        title="Health"
+        title="Transformation of Health"
     >
         <p>
-            “I tell you I must go!” I retorted, roused to something like
-            passion. “Do you think I can stay to become nothing to you? Do you
-            think I am an automaton?—a machine without feelings? and can bear to
-            have my morsel of bread snatched from my lips, and my drop of living
-            water dashed from my cup?
+		    "To transform health and enable better outcomes for all"
+
+            There are many challenges which will need to be addressed to ensure the future health 
+            of the population, including the demographic pressures of an ageing population, increasing 
+            levels of multiple long term conditions, the rising personal and societal costs of poor 
+            health and persistent inequalities in health outcomes across populations. To solve these 
+            it will be necessary to take a more integrated approach across multiple fields. The 
+            revolution in data science and AI enables a more proactive focus on the prevention, the 
+            earlier identification of disease, and earlier better targeted interventions to improve 
+            health for all. 
         </p>
     </GridRow>
 
@@ -37,11 +42,15 @@
         title="Environment and Sustainability"
     >
         <p>
-            Do you think, because I am poor, obscure, plain, and little, I am
-            soulless and heartless? You think wrong!—I have as much soul as
-            you,—and full as much heart! And if God had gifted me with some
-            beauty and much wealth, I should have made it as hard for you to
-            leave me, as it is now for me to leave you.
+			"To address the climate and biodiversity crisis and the need for greater sustainability"
+
+			The world is under threat from the twin crises of climate change and biodiversity loss. We 
+            understand the causes: they include climate change, land use change and pollution. To act on 
+            this we need to slow the pace of global heating, predict and mitigate climate impacts, and 
+            provide clear evidence to develop national and international policy to meet net zero targets. 
+            At the Turing we are working on a range of projects to address different aspects of these 
+            challenges, in areas such as in weather forecasting, sea-ice modelling, nuclear fusion, 
+            and renewables forecasting. 
         </p>
     </GridRow>
 
@@ -52,10 +61,18 @@
         title="Defence and National Security"
     >
         <p>
-            I am not talking to you now through the medium of custom,
-            conventionalities, nor even of mortal flesh;—it is my spirit that
-            addresses your spirit; just as if both had passed through the grave,
-            and we stood at God’s feet, equal,—as we are!”
+			"To protect the UK, its people and the places they inhabit"
+			
+            The explosion of human connectivity and information availability creates new ways in which
+            bad actors can cause harm to people, businesses, and societies, and makes it harder for 
+            defence and security agencies to identify, and act on insights. The UK must continue to 
+            stay ahead in researching, developing, and integrating technologies to meet these challenges. 
+            The Turing is committed to working providing better analysis of data at scale, helping 
+            to find key intelligence amongst an expanse of data and make informed decisions from 
+            resulting analysis; building resilient and secure methods of protecting networks and privacy; 
+            and developing evidence-based assessments of emerging technologies to help policymakers develop 
+            timely and effective legislation and policy. 
+
         </p>
     </GridRow>
 
@@ -65,7 +82,16 @@
         imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Branta_sandvicensis_LC399.jpg/640px-Branta_sandvicensis_LC399.jpg"
         title="Foundational Research"
     >
-        <p>Lorem ipsum, Jane's monologue ended there.</p>
+        <p>
+            Fundamental research in data science and artificial intelligence is a key capability in 
+            the Turing 2.0 strategy, to support the delivery of strategic goals and enable the application 
+            of AI methodology across the three grand challenges. The initial focus is on the development 
+            is AI for physical systems, with the aim of developing the next generation of foundational methods,
+            tools and theory to enable modelling, prediction and control of physical systems. This will focus 
+            on three strands: probabilistic and generative models for modelling and prediction of physical 
+            systems; bridging the divide between data-driven and mechanistic models; and accelerating 
+            large-scale computational simulations through machine learning.
+        </p>
     </GridRow>
 </Grid>
 
