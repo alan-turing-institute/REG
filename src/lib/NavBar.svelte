@@ -44,7 +44,9 @@
 
 <div id="navbar">
     <div id="navbar-left">
-        <img id="logo" src={logo} alt="The Alan Turing Institute logo" />
+        <a class="logo" href="https://www.turing.ac.uk/">
+            <img id="logo" src={logo} alt="The Alan Turing Institute logo" />
+        </a>
         <h1>Research Engineering</h1>
     </div>
 
@@ -92,6 +94,13 @@
         margin: 0;
     }
 
+    a.logo {
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     img#logo {
         width: 90px;
     }
@@ -111,24 +120,30 @@
         font-size: 1em;
         cursor: pointer;
         transition: background-size 0.3s;
-        background:
-            linear-gradient(
+        background: linear-gradient(
                 to right,
                 rgba(0, 0, 0, 0),
                 rgba(0, 0, 0, 0)
-                ),
+            ),
             linear-gradient(
                 to right,
                 rgba(186, 50, 227, 1),
                 rgba(124, 11, 158, 1)
             );
-        background-size: 100% 2px, 0 2px;
-        background-position: 100% 100%, 0 100%;
+        background-size:
+            100% 2px,
+            0 2px;
+        background-position:
+            100% 100%,
+            0 100%;
         background-repeat: no-repeat;
     }
 
-    button.active, button:hover {
-        background-size: 0 2px, 100% 2px;
+    button.active,
+    button:hover {
+        background-size:
+            0 2px,
+            100% 2px;
     }
 
     @media (max-width: 944px) {
