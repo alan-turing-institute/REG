@@ -7,9 +7,8 @@
 </script>
 
 <p>
-    We are a distributed team, with members based across the UK (and occasionally
-    beyond). The vast majority of our activities are designed for a hybrid
-    working model.
+    We are a distributed team, with members based across the UK. The vast
+    majority of our activities are designed for a hybrid working model.
 </p>
 
 <p>
@@ -69,8 +68,8 @@
 
 <p>
     Apart from project work, we also have 10% of our time set aside for personal
-    development as well as 10% for internal team responsibilities. Some of our outputs
-    from this time include:
+    development as well as 10% for internal team responsibilities. Some of our
+    outputs from this time include:
 </p>
 
 <ul>
