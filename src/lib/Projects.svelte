@@ -122,7 +122,7 @@
             imgSrc: seshat,
             title: "Seshat",
             description:
-                "A platform for computer vision models and datasets across the sciences and humanities.",
+                "A resource bringing together data about human history and polity borders across time.",
         },
         {
             href: "https://turinglang.org/",
