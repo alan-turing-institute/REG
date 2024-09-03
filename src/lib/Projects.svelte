@@ -12,6 +12,7 @@
     import ai4nwp from "src/assets/ai4nwp.png";
     import ami from "src/assets/ami.png";
     import assurance from "src/assets/assurance.png";
+    import autoemu from "src/assets/autoemu.png";
     import autspaces from "src/assets/autspaces.png";
     import dsh from "src/assets/dsh.png";
     import eider from "src/assets/eider.png";
@@ -53,6 +54,13 @@
             title: "Assurance Platform",
             description:
                 "An application for constructing trustworthy and ethical assurance cases for data-driven technologies.",
+        },
+        {
+            href: "https://github.com/alan-turing-institute/autoemulate",
+            imgSrc: autoemu,
+            title: "AutoEmulate",
+            description:
+                "Surrogate modelling to speed up digital twin simulations."
         },
         {
             href: "https://github.com/alan-turing-institute/AutSPACEs",
@@ -298,7 +306,7 @@
         width: max-content;
         grid-auto-flow: column;
         grid-template-rows: 1fr max-content max-content;
-        grid-template-columns: repeat(15, 200px);
+        grid-template-columns: repeat(16, 200px);
         gap: 10px 40px;
     }
 
