@@ -102,7 +102,7 @@
             imgSrc: prompto,
             title: "Prompto",
             description:
-                "A Python library for asynchronous querying ofLLM endpoints.",
+                "A Python library for asynchronous querying of LLM endpoints.",
         },
         {
             href: "https://www.turing.ac.uk/research/research-programmes/project-bluebird",
