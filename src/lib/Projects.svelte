@@ -194,6 +194,10 @@
 
     let canScrollLeft: boolean = false;
     let canScrollRight: boolean = true;
+    // Update currentProject based on scroll position
+    function updateCurrentProject() {
+        currentProject = Math.floor(galleryElem.scrollLeft / 240);
+    }
     // Update canScrollLeft and canScrollRight based on the current scroll
     // position, or the desired scroll position if targetX is provided
     function updateCanScrolls(targetX: number | null = null) {
@@ -235,6 +239,7 @@
         id="gallery-container"
         bind:this={galleryElem}
         on:scroll={() => {
+            updateCurrentProject();
             updateCanScrolls();
         }}
     >
