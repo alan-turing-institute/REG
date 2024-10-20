@@ -13,18 +13,17 @@
     <div class="grid-item">
         <h3>Careers</h3>
         <p>
-            We will be recruiting in the near future, hopefully in autumn 2024!
-            You can <a
-                href="https://alan-turing-institute.github.io/REG-handbook/docs/join_us/recruitment_faqs/"
-                target="_blank">read our recruitment FAQs here</a
-            >.
-        </p>
-        <p>
-            If you want to be notified when our job postings go live, you can
-            also
+            We don't have any open positions at the moment. However, if you
+            would like to be notified when our job postings go live, you can
             <a href="https://forms.office.com/e/vJy48fNJXB" target="_blank"
                 >subscribe to our mailing list here</a
             >.
+        </p>
+        <p>
+            We have put together <a
+                href="https://alan-turing-institute.github.io/REG-handbook/docs/join_us/recruitment_faqs/"
+                target="_blank">a list of recruitment FAQs here</a
+            > which explain what it's like to work with us and the application process.
         </p>
     </div>
 
