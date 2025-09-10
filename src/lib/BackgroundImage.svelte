@@ -6,7 +6,7 @@
 <svelte:head><link rel="preload" href={imagePath} as="image" /></svelte:head>
 
 <picture style="--opacity: {opacity}">
-    <img src={imagePath} alt="" />
+    <img src={imagePath} alt="" role="presentation" />
 </picture>
 
 <style>

@@ -1,25 +1,29 @@
 <script lang="ts">
-    export let href: string;
     export let imgSrc: string;
     export let alt: string;
 
     export let hovered: boolean;
+    
+    // Keep href prop for backwards compatibility but don't use it
+    export let href: string;
+    // eslint-disable-next-line no-unused-vars
+    href; // Suppress unused variable warning
 </script>
 
-<a
-    {href}
-    target="_blank"
+<div
     on:mouseenter={() => (hovered = true)}
     on:mouseleave={() => (hovered = false)}
     class:hovered
+    role="img"
+    aria-label={alt}
 >
     <img src={imgSrc} {alt} class:hovered />
-</a>
+</div>
 
 <style>
-    a, a:hover {
-        /* Override global style as we don't want images to be underlined */
-        background-size: 100% 0px, 0 2px;
+    div {
+        margin: 0;
+        padding: 0;
     }
 
     img {
