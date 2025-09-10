@@ -5,11 +5,12 @@
     export let href: string;
     export let title: string;
     export let imgSrc: string;
+    export let altText: string = title;
 
     let hovered: boolean = false;
 </script>
 
-<GridImage {href} {imgSrc} alt={title} bind:hovered />
+<GridImage {href} {imgSrc} alt={altText} bind:hovered />
 <GridText {href} {title} bind:hovered>
     <slot />
 </GridText>

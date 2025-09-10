@@ -24,6 +24,7 @@
             href="https://www.turing.ac.uk/research/research-engineering/meet-the-team"
             imgSrc={regTeam}
             title="Meet the team"
+            altText="Photograph of roughly 50 members of the Research Engineering Group on a stairwell at Away Day"
         >
             <p>
                 Learn more about our three job roles, and meet some of the
@@ -35,6 +36,7 @@
             href="https://www.turing.ac.uk/"
             imgSrc={atiSpace}
             title="The Alan Turing Institute"
+            altText="Empty office space at The Alan Turing Institute with a mural of Alan Turing in the background"
         >
             <p>
                 The Alan Turing Institute is the UK's national institute for
