@@ -91,7 +91,7 @@
             title: "Eider",
             description:
                 "An R package for declarative preprocessing of health data for machine learning models.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://www.turing.ac.uk/research/research-projects/role-synthetic-data-financial-systems",
