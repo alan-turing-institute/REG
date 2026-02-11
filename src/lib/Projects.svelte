@@ -77,7 +77,7 @@
             title: "AutSPACEs",
             description:
                 "A citizen science platform co-created by autistic people, their supporters, researchers, and the open source community.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://cvd-net.com/",
