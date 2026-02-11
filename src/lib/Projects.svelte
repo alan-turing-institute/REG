@@ -158,7 +158,7 @@
             title: "Scivision",
             description:
                 "A platform for computer vision models and datasets across the sciences and humanities.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://seshatdata.com/core/world_map",
