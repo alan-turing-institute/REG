@@ -40,7 +40,7 @@
         {
             href: "https://www.turing.ac.uk/research/research-projects/ai-numerical-weather-prediction-nwp-ai4nwp",
             imgSrc: ai4nwp,
-            title: "AI4NWP",
+            title: "FastNet",
             description:
                 "A collaboration with the Met Office on the use of modern AI techniques for weather forecasting.",
             isCompleted: false,
