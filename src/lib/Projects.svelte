@@ -75,7 +75,7 @@
             title: "AutSPACEs",
             description:
                 "A citizen science platform co-created by autistic people, their supporters, researchers, and the open source community.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://github.com/alan-turing-institute/data-safe-haven",
