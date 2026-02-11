@@ -173,6 +173,8 @@
         const j = Math.floor(Math.random() * (i + 1));
         [projects[i], projects[j]] = [projects[j], projects[i]];
     }
+    // Always order current projects before completed projects
+    projects.sort((a, b) => Number(a.isCompleted) - Number(b.isCompleted));
 
     let projectsShown: Project[] = [];
     $: {
@@ -287,7 +289,7 @@
         >
             <div
                 id="gallery"
-                style="--projects-length: {String(projectsShown.length)}"
+                style={`grid-template-columns: repeat(${projectsShown.length}, 200px);`}
             >
                 {#each projectsShown as project}
                     <GridCol
@@ -369,7 +371,6 @@
         width: max-content;
         grid-auto-flow: column;
         grid-template-rows: 1fr max-content max-content;
-        grid-template-columns: repeat(16, 200px);
         gap: 10px 40px;
     }
 
