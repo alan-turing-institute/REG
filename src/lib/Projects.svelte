@@ -88,6 +88,14 @@
             isCompleted: false,
         },
         {
+            href: "https://www.turing.ac.uk/news/ai-forecasting-initiative-set-strengthen-climate-resilience-and-food-security-west-africa",
+            imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+            title: "Project Cumulus",
+            description:
+                "End-to-end forecasting system for climate resilience and food security in West Africa.",
+            isCompleted: false,
+        },
+        {
             href: "https://github.com/alan-turing-institute/data-safe-haven",
             imgSrc: dsh,
             title: "Data Safe Haven",
@@ -108,7 +116,15 @@
             imgSrc: fridge,
             title: "FRIDGE",
             description:
-                "Creating trusted research environments for AI Research Resource supercomputers",
+                "Creating trusted research environments for AI Research Resource supercomputers.",
+            isCompleted: false,
+        },
+        {
+            href: "https://github.com/alan-turing-institute/icenet-mp",
+            imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+            title: "IceNetMP",
+            description:
+                "Multimodal predictions for sea ice levels.",
             isCompleted: false,
         },
         {
