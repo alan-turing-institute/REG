@@ -51,7 +51,7 @@
             title: "AMBER",
             description:
                 "Developing a pipeline to automate the monitoring of biodiversity using edge processing and remote sensors.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://github.com/alan-turing-institute/AssurancePlatform",
