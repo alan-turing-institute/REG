@@ -14,8 +14,10 @@
     import assurance from "src/assets/assurance.png";
     import autoemu from "src/assets/autoemu.png";
     import autspaces from "src/assets/autspaces.png";
+    import cvdnet from "src/assets/cvdnet.png";
     import dsh from "src/assets/dsh.png";
     import eider from "src/assets/eider.png";
+    import fridge from "src/assets/fridge.png";
     import hsbc from "src/assets/hsbc.jpg";
     import mapreader from "src/assets/mapreader.png";
     import nats from "src/assets/nats.png";
@@ -78,6 +80,14 @@
             isCompleted: false,
         },
         {
+            href: "https://cvd-net.com/",
+            imgSrc: cvdnet,
+            title: "CVDNet",
+            description:
+                "Personalised computational models of patients' hearts for improved cardiovascular care",
+            isCompleted: false,
+        },
+        {
             href: "https://github.com/alan-turing-institute/data-safe-haven",
             imgSrc: dsh,
             title: "Data Safe Haven",
@@ -94,6 +104,14 @@
             isCompleted: true,
         },
         {
+            href: "https://dareuk.org.uk/news-and-events/fridge-unlocking-ai-supercomputing-for-secure-sensitive-data-research/",
+            imgSrc: fridge,
+            title: "FRIDGE",
+            description:
+                "Creating trusted research environments for AI Research Resource supercomputers",
+            isCompleted: false,
+        },
+        {
             href: "https://www.turing.ac.uk/research/research-projects/role-synthetic-data-financial-systems",
             imgSrc: hsbc,
             title: "Synthetic Data",
@@ -107,7 +125,7 @@
             title: "MapReader",
             description:
                 "A computer vision tool to identify visual elements in images, particularly historical maps.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://github.com/alan-turing-institute/prompto",
@@ -121,6 +139,7 @@
             href: "https://www.turing.ac.uk/research/research-programmes/project-bluebird",
             imgSrc: nats,
             title: "Project Bluebird",
+
             description:
                 "Developing AI for air traffic control in collaboration with NATS.",
             isCompleted: false,
@@ -147,7 +166,7 @@
             title: "Seshat",
             description:
                 "A resource bringing together data about human history and polity borders across time.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://turinglang.org/",
