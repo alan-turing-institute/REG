@@ -163,7 +163,7 @@
             title: "Urban Analytics",
             description:
                 "A collection of software to improve how we design, interact with, and live in urban spaces.",
-            isCompleted: false,
+            isCompleted: true,
         },
     ];
 
