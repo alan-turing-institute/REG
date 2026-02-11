@@ -20,30 +20,47 @@
 <Grid>
     <GridRow
         pictureFirst={true}
-        href="https://www.turing.ac.uk/research/transformation-health"
-        imgSrc={health}
-        title="Transformation of Health"
+        href="https://www.turing.ac.uk/science-innovation/defence-and-national-security"
+        imgSrc={dandns}
+        title="Defence and National Security"
     >
         <p class="quote small">
-            To transform health and enable better outcomes for all
+            To protect the UK, its people, and the places they inhabit
         </p>
         <p class="small">
-            There are many challenges which need to be addressed to ensure the
-            future health of the population, including the demographic pressures
-            of an ageing population, increasing levels of multiple long term
-            conditions, the rising personal and societal costs of poor health,
-            and persistent inequalities in health outcomes across populations.
-            To solve these it will be necessary to take a more integrated
-            approach across multiple fields. The revolution in data science and
-            AI enables a more proactive focus on the prevention, the earlier
-            identification of disease, and earlier and better targeted
-            interventions to improve health for all.
+            Rising technological change, global connectivity, and expanding data
+            are creating new security risks while also making it harder for
+            defence agencies to extract timely insights. Rapid innovation is
+            also challenging lawmakers and policymakers to keep governance
+            frameworks up to date. To protect people and national interests, the
+            UK must stay ahead through continued investment in research,
+            innovation, and advanced security technologies.
         </p>
     </GridRow>
 
     <GridRow
         pictureFirst={true}
-        href="https://www.turing.ac.uk/research/environment-and-sustainability"
+        href="https://www.turing.ac.uk/science-innovation/health"
+        imgSrc={health}
+        title="Health"
+    >
+        <p class="quote small">
+            To transform health and enable better outcomes for all
+        </p>
+        <p class="small">
+            Health services such as the NHS face growing pressure and an
+            increasingly urgent need for major transformation. Longer lifespans,
+            rising long-term health conditions, unmet care needs, workforce
+            strain, and escalating treatment costs are all intensifying the
+            challenge. Addressing this will require stronger prevention of ill
+            health alongside significant improvements in the productivity and
+            effectiveness of health services.
+        </p>
+    </GridRow>
+
+    <GridRow
+        pictureFirst={true}
+        href="https://www.turing.ac.uk/science-innovation/environment-and-sustainability"
         imgSrc={eands}
         title="Environment and Sustainability"
     >
@@ -52,62 +69,32 @@
             greater sustainability
         </p>
         <p class="small">
-            The world is under threat from the twin crises of climate change and
-            biodiversity loss. We understand the causes: they include climate
-            change, land use change, and pollution. To act on this we need to
-            slow the pace of global heating, predict and mitigate climate
-            impacts, and provide clear evidence to develop national and
-            international policy to meet net zero targets. At the Turing we are
-            working on a range of projects to address different aspects of these
-            challenges, in areas such as in weather forecasting, sea-ice
-            modelling, nuclear fusion, and renewables forecasting.
+            Climate change is already reshaping the world, bringing more extreme
+            weather, rising sea levels, and growing risks to food, water, and
+            infrastructure in the UK and globally. Exceeding the 1.5&nbsp;°C warming
+            threshold is expected to intensify these impacts, increasing floods,
+            droughts, and pressure on societies and economies. Addressing this
+            requires urgent international cooperation to cut emissions, build
+            resilience, and accelerate innovation in forecasting,
+            decarbonisation, and climate-adaptation technologies.
         </p>
     </GridRow>
 
     <GridRow
         pictureFirst={true}
-        href="https://www.turing.ac.uk/research/defence-and-national-security"
-        imgSrc={dandns}
-        title="Defence and National Security"
-    >
-        <p class="quote small">
-            To protect the UK, its people, and the places they inhabit
-        </p>
-        <p class="small">
-            The explosion of human connectivity and information availability
-            creates new ways in which bad actors can cause harm to people,
-            businesses, and societies, and makes it harder for defence and
-            security agencies to identify and act on insights. The UK must
-            continue to stay ahead in researching, developing, and integrating
-            technologies to meet these challenges. The Turing is committed to
-            working providing better analysis of data at scale, helping to find
-            key intelligence amongst an expanse of data and make informed
-            decisions from resulting analysis; building resilient and secure
-            methods of protecting networks and privacy; and developing
-            evidence-based assessments of emerging technologies to help
-            policymakers develop timely and effective legislation and policy.
-        </p>
-    </GridRow>
-
-    <GridRow
-        pictureFirst={true}
-        href="https://www.turing.ac.uk/research/research-programmes/fundamental-ai"
+        href="https://www.turing.ac.uk/science-innovation/fundamental-research"
         imgSrc={fundamentalai}
-        title="Foundational Research"
+        title="Fundamental Research"
     >
         <p class="small">
-            Foundational research in data science and artificial intelligence is
-            a key capability in the Turing&rsquo;s strategy, to support the
-            delivery of strategic goals and enable the application of AI
-            methodology across the three grand challenges. The initial focus is
-            on the development is AI for physical systems, with the aim of
-            developing the next generation of foundational methods, tools and
-            theory to enable modelling, prediction and control of physical
-            systems. This will focus on three strands: probabilistic and
-            generative models for modelling and prediction of physical systems;
-            bridging the divide between data-driven and mechanistic models; and
-            accelerating large-scale computational simulations through machine
-            learning.
+            Fundamental research in data science and AI is central to the Turing
+            2.0 strategy, supporting major challenges in environment, health,
+            and national security. The programme focuses on interdisciplinary
+            pathways that move ideas from basic research through application to
+            real-world impact, while promoting accessible, sustainable, and
+            trustworthy AI. Current work includes missions such as AI for
+            Physical Systems, developing advanced methods to model, predict, and
+            control complex real-world systems.
         </p>
     </GridRow>
 </Grid>

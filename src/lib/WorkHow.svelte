@@ -22,11 +22,6 @@
         Away Days, where we brainstorm ways of improving what we do as a team;
     </li>
     <li>
-        AIUK, the Turing's <a href="https://ai-uk.turing.ac.uk/" target="_blank"
-            >flagship conference</a
-        >;
-    </li>
-    <li>
         Hack Week, where we take a week off work to create fun (and sometimes
         useful!) projects;
     </li>
@@ -46,9 +41,9 @@
         title="Hack Week 2024"
     >
         <p>
-            We published a blog post about our experiences at Hack Week this
-            year, and all the projects we worked on! (Yes, including dinosaurs.
-            🦖)
+            For an example of what goes on in our Hack Week, check out this blog
+            post which gives a recap of the 2024 incarnation and the projects
+            we worked on. (Yes, including dinosaurs 🦖)
         </p>
     </GridRow>
 
