@@ -24,6 +24,7 @@
     import prompto from "src/assets/prompto.png";
     import rcp from "src/assets/rcp.png";
     import scivision from "src/assets/scivision.jpg";
+    import seaice from "src/assets/seaice.png";
     import seshat from "src/assets/seshat.png";
     import turingjl from "src/assets/turingjl.png";
     import ua from "src/assets/ua.png";
@@ -121,10 +122,10 @@
         },
         {
             href: "https://github.com/alan-turing-institute/icenet-mp",
-            imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+            imgSrc: seaice,
             title: "IceNetMP",
             description:
-                "Multimodal predictions for sea ice levels.",
+                "Multimodal predictions for sea ice forecasting.",
             isCompleted: false,
         },
         {
