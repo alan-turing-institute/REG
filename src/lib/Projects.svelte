@@ -9,14 +9,15 @@
 
     import wordCloud from "src/assets/wordcloud.png";
 
-    import ai4nwp from "src/assets/ai4nwp.png";
     import ami from "src/assets/ami.png";
     import assurance from "src/assets/assurance.png";
     import autoemu from "src/assets/autoemu.png";
     import autspaces from "src/assets/autspaces.png";
+    import cumulus from "src/assets/cumulus.png";
     import cvdnet from "src/assets/cvdnet.png";
     import dsh from "src/assets/dsh.png";
     import eider from "src/assets/eider.png";
+    import fastnet from "src/assets/fastnet.png";
     import fridge from "src/assets/fridge.png";
     import hsbc from "src/assets/hsbc.jpg";
     import mapreader from "src/assets/mapreader.png";
@@ -26,6 +27,7 @@
     import scivision from "src/assets/scivision.jpg";
     import seaice from "src/assets/seaice.png";
     import seshat from "src/assets/seshat.png";
+    import t0 from "src/assets/t0.png";
     import turingjl from "src/assets/turingjl.png";
     import ua from "src/assets/ua.png";
 
@@ -41,8 +43,8 @@
 
     let projects: Project[] = [
         {
-            href: "https://www.turing.ac.uk/research/research-projects/ai-numerical-weather-prediction-nwp-ai4nwp",
-            imgSrc: ai4nwp,
+            href: "https://www.turing.ac.uk/research/research-projects/fastnet",
+            imgSrc: fastnet,
             title: "FastNet",
             description:
                 "A collaboration with the Met Office on the use of modern AI techniques for weather forecasting.",
@@ -90,7 +92,7 @@
         },
         {
             href: "https://www.turing.ac.uk/news/ai-forecasting-initiative-set-strengthen-climate-resilience-and-food-security-west-africa",
-            imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+            imgSrc: cumulus,
             title: "Project Cumulus",
             description:
                 "End-to-end forecasting system for climate resilience and food security in West Africa.",
@@ -134,7 +136,7 @@
             title: "Synthetic Data",
             description:
                 "A project with HSBC exploring the generation and use of synthetic data in financial systems.",
-            isCompleted: false,
+            isCompleted: true,
         },
         {
             href: "https://github.com/maps-as-data/MapReader",
@@ -184,6 +186,14 @@
             description:
                 "A resource bringing together data about human history and polity borders across time.",
             isCompleted: true,
+        },
+        {
+            href: "https://www.turing.ac.uk/research/research-projects/project-t0",
+            imgSrc: t0,
+            title: "t0",
+            description:
+                "Retrieval-augmented reasoning with lean language models.",
+            isCompleted: false,
         },
         {
             href: "https://turinglang.org/",
