@@ -28,6 +28,7 @@
     import scivision from "src/assets/scivision.jpg";
     import seaice from "src/assets/seaice.png";
     import seshat from "src/assets/seshat.png";
+    import smoke from "src/assets/smoke.jpg";
     import t0 from "src/assets/t0.png";
     import turingjl from "src/assets/turingjl.png";
     import ua from "src/assets/ua.png";
@@ -194,6 +195,14 @@
             description:
                 "A resource bringing together data about human history and polity borders across time.",
             isCompleted: true,
+        },
+        {
+            href: "https://www.turing.ac.uk/research/defence-and-national-security/critical-national-infrastructure/update-may25",
+            imgSrc: smoke,
+            title: "Smoke and Mirrors",
+            description:
+                "Adaptive models for protecting critical national infrastructure against cyber attacks.",
+            isCompleted: false,
         },
         {
             href: "https://www.turing.ac.uk/research/research-projects/project-t0",
