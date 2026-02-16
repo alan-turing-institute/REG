@@ -19,6 +19,7 @@
     import eider from "src/assets/eider.png";
     import fastnet from "src/assets/fastnet.png";
     import fridge from "src/assets/fridge.png";
+    import gambit from "src/assets/gambit.png";
     import hsbc from "src/assets/hsbc.jpg";
     import mapreader from "src/assets/mapreader.png";
     import nats from "src/assets/nats.png";
@@ -123,11 +124,18 @@
             isCompleted: false,
         },
         {
+            href: "https://www.gambit-project.org/",
+            imgSrc: gambit,
+            title: "Gambit",
+            description:
+                "Software for building and analysing game-theoretic models.",
+            isCompleted: false,
+        },
+        {
             href: "https://github.com/alan-turing-institute/icenet-mp",
             imgSrc: seaice,
             title: "IceNetMP",
-            description:
-                "Multimodal predictions for sea ice forecasting.",
+            description: "Multimodal predictions for sea ice forecasting.",
             isCompleted: false,
         },
         {
@@ -168,7 +176,7 @@
             imgSrc: rcp,
             title: "Research Computing",
             description:
-                "Managing the computing facilities that the Turing has access to, and training researchers to make the best use of them.",
+                "Managing the computing facilities that the Turing has access to, and training researchers to use them.",
             isCompleted: false,
         },
         {
