@@ -13,7 +13,7 @@
     import assurance from "src/assets/assurance.png";
     import autoemu from "src/assets/autoemu.png";
     import autspaces from "src/assets/autspaces.png";
-    import cumulus from "src/assets/cumulus.png";
+    import cumulus from "src/assets/cumulus.jpg";
     import cvdnet from "src/assets/cvdnet.png";
     import dsh from "src/assets/dsh.png";
     import eider from "src/assets/eider.png";
@@ -71,7 +71,7 @@
             imgSrc: autoemu,
             title: "AutoEmulate",
             description:
-                "Surrogate modelling to speed up digital twin simulations.",
+                "Surrogate modelling to speed up physical simulations.",
             isCompleted: false,
         },
         {
