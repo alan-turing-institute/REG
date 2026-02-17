@@ -246,14 +246,14 @@
             (project) => showCompleted || !project.isCompleted,
         );
         // Add in advertisement at the front
-        projectsShown.unshift({
-            href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-            imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
-            title: "Your project?",
-            description:
-                "This space could be yours! Simply contact Penny on Slack for some free advertising.",
-            isCompleted: false,
-        });
+        // projectsShown.unshift({
+        //     href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
+        //     imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+        //     title: "Your project?",
+        //     description:
+        //         "This space could be yours! Simply contact Penny on Slack for some free advertising.",
+        //     isCompleted: false,
+        // });
     }
 
     let galleryElem: HTMLDivElement;
