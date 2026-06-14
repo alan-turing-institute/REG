@@ -49,11 +49,6 @@
             />.
         </p>
         <p>
-            If you'd like to hear more about or work with us on equality,
-            diversity, and inclusion, please contact our EDI leads Kat and Penny
-            (<Email address="kgoldmann" />; <Email address="pyong" />).
-        </p>
-        <p>
             For all other queries, please contact Martin O'Reilly, Director of
             Research Engineering (<Email address="moreilly" />).
         </p>
