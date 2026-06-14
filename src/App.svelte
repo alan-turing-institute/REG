@@ -55,15 +55,11 @@
         }
     }
 
-    let y: number = 0;
-    let currentSection: number = 0;
-    let opacities: number[] = Array(backgroundImages.length).fill(0);
-    $: {
-        for (let i = 0; i < opacities.length; i++) {
-            opacities[i] = getOpacity(y, i);
-        }
-        currentSection = getCurrentSection(y);
-    }
+    let y: number = $state(0);
+    let opacities: number[] = $derived(
+        backgroundImages.map((_, i) => getOpacity(y, i)),
+    );
+    let currentSection: number = $derived(getCurrentSection(y));
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -71,7 +67,7 @@
     <BackgroundImage {imagePath} opacity={opacities[i]} />
 {/each}
 
-<NavBar bind:currentSection />
+<NavBar {currentSection} />
 <main>
     <Content />
 </main>

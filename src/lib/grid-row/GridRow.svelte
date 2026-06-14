@@ -1,19 +1,29 @@
 <script lang="ts">
     import GridImage from "src/lib/grid-row/GridImage.svelte";
     import GridText from "src/lib/grid-row/GridText.svelte";
+    import type { Snippet } from "svelte";
 
-    export let pictureFirst: boolean;
-    export let href: string | null;
-    export let title: string;
-    export let imgSrc: string;
+    let {
+        pictureFirst,
+        href,
+        title,
+        imgSrc,
+        children,
+    }: {
+        pictureFirst: boolean;
+        href: string | null;
+        title: string;
+        imgSrc: string;
+        children?: Snippet;
+    } = $props();
 
-    let hovered: boolean = false;
+    let hovered: boolean = $state(false);
 </script>
 
 <div class="grid-container picture-first" class:reversed={!pictureFirst}>
     <GridImage {href} {imgSrc} alt={title} bind:hovered />
     <GridText {href} {title} bind:hovered alignRight={!pictureFirst}>
-        <slot />
+        {@render children?.()}
     </GridText>
 </div>
 

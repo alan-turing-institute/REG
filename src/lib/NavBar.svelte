@@ -4,7 +4,7 @@
     import menuIcon from "src/assets/menu.png";
     import menuOpen from "src/assets/menuopen.png";
 
-    export let currentSection: number;
+    let { currentSection }: { currentSection: number } = $props();
 
     // This function is copied from Content.svelte. I don't know how to reuse
     // the code without putting it in stores.ts which is ugly because we can't
@@ -35,7 +35,7 @@
         window.scrollTo({ top: targetY, behavior: "smooth" });
     }
 
-    let dropdownVisible = false;
+    let dropdownVisible = $state(false);
     const navbarItems = [
         "About us",
         "Research",
@@ -60,7 +60,7 @@
                 <li>
                     <button
                         class="menu-link"
-                        on:click={() => scrollToSection(i)}
+                        onclick={() => scrollToSection(i)}
                         class:active={i === currentSection}
                     >
                         {item}
@@ -71,11 +71,11 @@
         <!-- dropdown for narrow screens -->
         <button
             id="dropdown"
-            on:click={() => {
+            onclick={() => {
                 dropdownVisible = !dropdownVisible;
             }}
-            on:focusout={(e) => {
-                if (e.currentTarget.contains(e.relatedTarget)) {
+            onfocusout={(e) => {
+                if (e.currentTarget.contains(e.relatedTarget as Node | null)) {
                     return;
                 }
                 dropdownVisible = false;
@@ -92,7 +92,7 @@
                         <li>
                             <button
                                 class="menu-link"
-                                on:click={() => scrollToSection(i)}
+                                onclick={() => scrollToSection(i)}
                                 class:active={i === currentSection}
                             >
                                 {item}

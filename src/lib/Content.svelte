@@ -34,7 +34,7 @@
     });
 </script>
 
-<svelte:window on:resize={setPeakStarts} />
+<svelte:window onresize={setPeakStarts} />
 
 <div id="content">
     <div class="content-box">
