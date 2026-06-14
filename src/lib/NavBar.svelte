@@ -4,7 +4,7 @@
     import menuIcon from "src/assets/menu.png";
     import menuOpen from "src/assets/menuopen.png";
 
-    export let currentSection: number;
+    let { currentSection }: { currentSection: number } = $props();
 
     // This function is copied from Content.svelte. I don't know how to reuse
     // the code without putting it in stores.ts which is ugly because we can't
@@ -35,7 +35,7 @@
         window.scrollTo({ top: targetY, behavior: "smooth" });
     }
 
-    let dropdownVisible = false;
+    let dropdownVisible = $state(false);
     const navbarItems = [
         "About us",
         "Research",
@@ -60,7 +60,7 @@
                 <li>
                     <button
                         class="menu-link"
-                        on:click={() => scrollToSection(i)}
+                        onclick={() => scrollToSection(i)}
                         class:active={i === currentSection}
                     >
                         {item}
@@ -69,30 +69,34 @@
             {/each}
         </ul>
         <!-- dropdown for narrow screens -->
-        <button
+        <div
             id="dropdown"
-            on:click={() => {
-                dropdownVisible = !dropdownVisible;
-            }}
-            on:focusout={(e) => {
-                if (e.currentTarget.contains(e.relatedTarget)) {
+            onfocusout={(e) => {
+                if (e.currentTarget.contains(e.relatedTarget as Node | null)) {
                     return;
                 }
                 dropdownVisible = false;
             }}
         >
-            {#if dropdownVisible}
-                <img src={menuOpen} alt="Close dropdown menu" />
-            {:else}
-                <img src={menuIcon} alt="Dropdown menu" />
-            {/if}
+            <button
+                id="dropdown-toggle"
+                onclick={() => {
+                    dropdownVisible = !dropdownVisible;
+                }}
+            >
+                {#if dropdownVisible}
+                    <img src={menuOpen} alt="Close dropdown menu" />
+                {:else}
+                    <img src={menuIcon} alt="Dropdown menu" />
+                {/if}
+            </button>
             {#if dropdownVisible}
                 <ul id="navbar-dropdown">
                     {#each navbarItems as item, i}
                         <li>
                             <button
                                 class="menu-link"
-                                on:click={() => scrollToSection(i)}
+                                onclick={() => scrollToSection(i)}
                                 class:active={i === currentSection}
                             >
                                 {item}
@@ -101,7 +105,7 @@
                     {/each}
                 </ul>
             {/if}
-        </button>
+        </div>
     </div>
 </div>
 
@@ -111,10 +115,11 @@
         top: 0;
         width: 100%;
         height: 50px;
-        background-color: #ded9e2;
-        box-shadow: 0 0 10px 0 rgba(69, 47, 87, 0.5);
+        background-color: rgba(222, 217, 226, 0.82);
+        backdrop-filter: blur(12px) saturate(1.4);
+        -webkit-backdrop-filter: blur(12px) saturate(1.4);
+        box-shadow: var(--shadow-nav);
         z-index: 2;
-        opacity: 1;
         display: flex;
         flex-direction: row;
         padding: 5px 30px;
@@ -131,6 +136,9 @@
     h1 {
         font-size: 1.2em;
         margin: 0;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--deep);
     }
 
     a.logo {
@@ -144,7 +152,7 @@
         width: 90px;
     }
 
-    button#dropdown {
+    div#dropdown {
         display: none;
     }
 
@@ -196,11 +204,15 @@
             display: none;
         }
 
-        button#dropdown {
+        div#dropdown {
             display: block;
             position: relative;
-            width: min-content;
             height: 90%;
+        }
+
+        button#dropdown-toggle {
+            width: min-content;
+            height: 100%;
             cursor: pointer;
             border: 1px solid black;
             border-radius: 5px;
@@ -208,7 +220,7 @@
             background: none;
         }
 
-        button#dropdown img {
+        button#dropdown-toggle img {
             width: 15px;
             height: auto;
         }

@@ -1,16 +1,22 @@
 <script lang="ts">
-    export let href: string;
-    export let imgSrc: string;
-    export let alt: string;
-
-    export let hovered: boolean;
+    let {
+        href,
+        imgSrc,
+        alt,
+        hovered = $bindable(),
+    }: {
+        href: string;
+        imgSrc: string;
+        alt: string;
+        hovered?: boolean;
+    } = $props();
 </script>
 
 <a
     {href}
     target="_blank"
-    on:mouseenter={() => (hovered = true)}
-    on:mouseleave={() => (hovered = false)}
+    onmouseenter={() => (hovered = true)}
+    onmouseleave={() => (hovered = false)}
     class:hovered
 >
     <img src={imgSrc} {alt} class:hovered />
@@ -26,7 +32,7 @@
         height: 100%;
         max-height: 200px;
         width: 100%;
-        border-radius: 5px;
+        border-radius: 8px;
         transition: opacity 0.3s, box-shadow 0.3s;
         object-fit: cover;
     }

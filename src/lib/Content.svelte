@@ -34,7 +34,7 @@
     });
 </script>
 
-<svelte:window on:resize={setPeakStarts} />
+<svelte:window onresize={setPeakStarts} />
 
 <div id="content">
     <div class="content-box">
@@ -73,17 +73,35 @@
     }
 
     div.content-box {
-        opacity: 0.92;
-        border-radius: 10px;
+        opacity: 0.94;
+        border-radius: 14px;
         background-color: #f7f4ea;
-        box-shadow: 0 0 10px 0 rgba(111, 93, 32, 0.5);
-        padding: 30px;
+        box-shadow: var(--shadow-card);
+        padding: 34px;
         display: flex;
         flex-direction: column;
         gap: 20px;
 
         & h2 {
             margin: 0;
+            padding-bottom: 14px;
+            position: relative;
+        }
+
+        /* Small branded accent bar echoing the link underline */
+        & h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 48px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(
+                to right,
+                var(--accent-bright),
+                var(--accent)
+            );
         }
     }
 

@@ -1,8 +1,19 @@
 <script lang="ts">
-    export let href: string | null;
-    export let title: string;
-    export let hovered: boolean;
-    export let alignRight: boolean;
+    import type { Snippet } from "svelte";
+
+    let {
+        href,
+        title,
+        hovered = $bindable(),
+        alignRight,
+        children,
+    }: {
+        href: string | null;
+        title: string;
+        hovered?: boolean;
+        alignRight: boolean;
+        children?: Snippet;
+    } = $props();
 </script>
 
 <div class="text" class:alignRight>
@@ -10,8 +21,8 @@
         <a
             {href}
             target="_blank"
-            on:mouseenter={() => (hovered = true)}
-            on:mouseleave={() => (hovered = false)}
+            onmouseenter={() => (hovered = true)}
+            onmouseleave={() => (hovered = false)}
             class:hovered
         >
             <h3>{title}</h3>
@@ -19,7 +30,7 @@
     {:else}
         <h3>{title}</h3>
     {/if}
-    <slot />
+    {@render children?.()}
 </div>
 
 <style>

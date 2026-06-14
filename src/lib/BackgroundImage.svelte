@@ -1,6 +1,6 @@
 <script lang="ts">
-    export let imagePath: string;
-    export let opacity: number;
+    let { imagePath, opacity }: { imagePath: string; opacity: number } =
+        $props();
 </script>
 
 <svelte:head><link rel="preload" href={imagePath} as="image" /></svelte:head>

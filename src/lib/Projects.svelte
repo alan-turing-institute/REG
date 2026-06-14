@@ -33,7 +33,7 @@
     import turingjl from "src/assets/turingjl.png";
     import ua from "src/assets/ua.png";
 
-    let showCompleted: boolean = false;
+    let showCompleted: boolean = $state(false);
 
     type Project = {
         href: string;
@@ -239,22 +239,19 @@
     // Always order current projects before completed projects
     projects.sort((a, b) => Number(a.isCompleted) - Number(b.isCompleted));
 
-    let projectsShown: Project[] = [];
-    $: {
-        // Filter projects based on showCompleted
-        projectsShown = projects.filter(
-            (project) => showCompleted || !project.isCompleted,
-        );
-        // Add in advertisement at the front
-        // projectsShown.unshift({
-        //     href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
-        //     imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
-        //     title: "Your project?",
-        //     description:
-        //         "This space could be yours! Simply contact Penny on Slack for some free advertising.",
-        //     isCompleted: false,
-        // });
-    }
+    // Filter projects based on showCompleted
+    let projectsShown: Project[] = $derived(
+        projects.filter((project) => showCompleted || !project.isCompleted),
+    );
+    // Add in advertisement at the front
+    // projectsShown.unshift({
+    //     href: "https://www.turing.ac.uk/research/research-engineering/meet-the-team",
+    //     imgSrc: "https://thumbs.dreamstime.com/b/gray-white-maine-coon-cat-pointing-paw-camera-studio-shot-blue-tabby-raising-reaching-216696547.jpg",
+    //     title: "Your project?",
+    //     description:
+    //         "This space could be yours! Simply contact Penny on Slack for some free advertising.",
+    //     isCompleted: false,
+    // });
 
     let galleryElem: HTMLDivElement;
     let currentProject: number = 0;
@@ -286,8 +283,8 @@
         updateCanScrolls(targetX);
     }
 
-    let canScrollLeft: boolean = false;
-    let canScrollRight: boolean = true;
+    let canScrollLeft: boolean = $state(false);
+    let canScrollRight: boolean = $state(true);
     // Update currentProject based on scroll position
     function updateCurrentProject() {
         currentProject = Math.floor(galleryElem.scrollLeft / 240);
@@ -326,7 +323,7 @@
         <input
             type="checkbox"
             bind:checked={showCompleted}
-            on:change={() => {
+            onchange={() => {
                 currentProject = 0;
                 galleryElem.scroll({ left: 0, behavior: "smooth" });
                 updateCanScrolls(0);
@@ -335,7 +332,7 @@
         Show completed projects
     </label>
     <div id="gallery-container-container">
-        <button on:click={() => scrollGallery(-1)}>
+        <button onclick={() => scrollGallery(-1)}>
             {#if canScrollLeft}
                 <img src={sLeft} alt="Scroll left" class="scroll" />
             {:else}
@@ -345,7 +342,7 @@
         <div
             id="gallery-container"
             bind:this={galleryElem}
-            on:scroll={() => {
+            onscroll={() => {
                 updateCurrentProject();
                 updateCanScrolls();
             }}
@@ -365,7 +362,7 @@
                 {/each}
             </div>
         </div>
-        <button on:click={() => scrollGallery(1)}>
+        <button onclick={() => scrollGallery(1)}>
             {#if canScrollRight}
                 <img src={sRight} alt="Scroll right" class="scroll" />
             {:else}
@@ -417,6 +414,10 @@
         cursor: pointer;
         padding: 0;
         margin: 0;
+        transition: transform 0.2s ease;
+    }
+    button:hover {
+        transform: scale(1.12);
     }
     img.scroll {
         height: 50px;
@@ -424,7 +425,12 @@
     }
 
     div#gallery-container {
-        overflow-x: scroll;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    div#gallery-container::-webkit-scrollbar {
+        display: none;
     }
 
     div#gallery {
@@ -441,7 +447,8 @@
         width: 80%;
         max-width: 700px;
         margin: 0 auto;
-        border-radius: 5px;
+        border-radius: 10px;
+        box-shadow: var(--shadow-card);
     }
 
     p {
