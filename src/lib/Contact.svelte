@@ -94,16 +94,27 @@
     }
 
     div.grid-item {
-        border: 2px solid black;
-        border-radius: 10px;
-        padding: 20px;
+        border: 1px solid rgba(53, 9, 66, 0.1);
+        border-radius: 12px;
+        padding: 22px;
         display: flex;
         flex-direction: column;
         gap: 20px;
         font-size: 0.9em;
+        background-color: #fffdf8;
+        box-shadow: var(--shadow-card);
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    div.grid-item:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-card-hover);
     }
 
     h3 {
         margin: 0;
+        color: var(--deep);
     }
 </style>

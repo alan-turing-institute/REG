@@ -32,7 +32,7 @@
         height: 100%;
         max-height: 200px;
         width: 100%;
-        border-radius: 5px;
+        border-radius: 8px;
         transition: opacity 0.3s, box-shadow 0.3s;
         object-fit: cover;
     }

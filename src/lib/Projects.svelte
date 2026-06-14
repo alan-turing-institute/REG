@@ -414,6 +414,10 @@
         cursor: pointer;
         padding: 0;
         margin: 0;
+        transition: transform 0.2s ease;
+    }
+    button:hover {
+        transform: scale(1.12);
     }
     img.scroll {
         height: 50px;
@@ -421,7 +425,12 @@
     }
 
     div#gallery-container {
-        overflow-x: scroll;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    div#gallery-container::-webkit-scrollbar {
+        display: none;
     }
 
     div#gallery {
@@ -438,7 +447,8 @@
         width: 80%;
         max-width: 700px;
         margin: 0 auto;
-        border-radius: 5px;
+        border-radius: 10px;
+        box-shadow: var(--shadow-card);
     }
 
     p {

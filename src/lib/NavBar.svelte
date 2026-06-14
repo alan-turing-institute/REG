@@ -115,10 +115,11 @@
         top: 0;
         width: 100%;
         height: 50px;
-        background-color: #ded9e2;
-        box-shadow: 0 0 10px 0 rgba(69, 47, 87, 0.5);
+        background-color: rgba(222, 217, 226, 0.82);
+        backdrop-filter: blur(12px) saturate(1.4);
+        -webkit-backdrop-filter: blur(12px) saturate(1.4);
+        box-shadow: var(--shadow-nav);
         z-index: 2;
-        opacity: 1;
         display: flex;
         flex-direction: row;
         padding: 5px 30px;
@@ -135,6 +136,9 @@
     h1 {
         font-size: 1.2em;
         margin: 0;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--deep);
     }
 
     a.logo {
