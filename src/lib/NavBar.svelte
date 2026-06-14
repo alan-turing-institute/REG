@@ -69,11 +69,8 @@
             {/each}
         </ul>
         <!-- dropdown for narrow screens -->
-        <button
+        <div
             id="dropdown"
-            onclick={() => {
-                dropdownVisible = !dropdownVisible;
-            }}
             onfocusout={(e) => {
                 if (e.currentTarget.contains(e.relatedTarget as Node | null)) {
                     return;
@@ -81,11 +78,18 @@
                 dropdownVisible = false;
             }}
         >
-            {#if dropdownVisible}
-                <img src={menuOpen} alt="Close dropdown menu" />
-            {:else}
-                <img src={menuIcon} alt="Dropdown menu" />
-            {/if}
+            <button
+                id="dropdown-toggle"
+                onclick={() => {
+                    dropdownVisible = !dropdownVisible;
+                }}
+            >
+                {#if dropdownVisible}
+                    <img src={menuOpen} alt="Close dropdown menu" />
+                {:else}
+                    <img src={menuIcon} alt="Dropdown menu" />
+                {/if}
+            </button>
             {#if dropdownVisible}
                 <ul id="navbar-dropdown">
                     {#each navbarItems as item, i}
@@ -101,7 +105,7 @@
                     {/each}
                 </ul>
             {/if}
-        </button>
+        </div>
     </div>
 </div>
 
@@ -144,7 +148,7 @@
         width: 90px;
     }
 
-    button#dropdown {
+    div#dropdown {
         display: none;
     }
 
@@ -196,11 +200,15 @@
             display: none;
         }
 
-        button#dropdown {
+        div#dropdown {
             display: block;
             position: relative;
-            width: min-content;
             height: 90%;
+        }
+
+        button#dropdown-toggle {
+            width: min-content;
+            height: 100%;
             cursor: pointer;
             border: 1px solid black;
             border-radius: 5px;
@@ -208,7 +216,7 @@
             background: none;
         }
 
-        button#dropdown img {
+        button#dropdown-toggle img {
             width: 15px;
             height: auto;
         }
